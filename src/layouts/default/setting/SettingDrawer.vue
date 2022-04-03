@@ -1,0 +1,200 @@
+<script setup lang="ts">
+  import { computed, unref } from 'vue';
+
+  import {
+    ThemeModePicker,
+    LayoutModePicker,
+    ThemeColorPicker,
+    SettingFooter,
+    SliderItem,
+    SwitchItem,
+    SelectItem,
+    InputNumberItem,
+  } from './components';
+
+  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
+  import { useHeaderSetting } from '/@/hooks/setting/useHeaderSetting';
+  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
+  import { useMultipleTabSetting } from '/@/hooks/setting/useMultipleTabSetting';
+  import { useTransitionSetting } from '/@/hooks/setting/useTransitionSetting';
+
+  import { MenuTypeEnum, TriggerEnum, TabsStyleEnum } from '/@/enums/menuEnum';
+  import {
+    HandlerEnum,
+    routerTransitionOptions,
+    getMenuTriggerOptions,
+    tabsTransitionOptions,
+  } from './enum';
+
+  import { useI18n } from '/@/hooks/web/useI18n';
+  import { useDrawer, useDrawerEnum } from '/@/hooks/component/useDrawer';
+
+  import { APP_PRESET_COLOR_LIST } from '/@/settings/designSetting';
+
+  const { t } = useI18n();
+  const [state] = useDrawer(useDrawerEnum.AppConfigDrawer);
+
+  const { getShowFooter, getShowBreadCrumb, getShowBreadCrumbIcon, getThemeColor } =
+    useRootSetting();
+
+  const {
+    getIsHorizontal,
+    getShowMenu,
+    getMenuType,
+    getSplit,
+    getMenuWidth,
+    getMenuRootIndent,
+    getMenuIndent,
+    getTrigger,
+  } = useMenuSetting();
+
+  const { getShowHeader } = useHeaderSetting();
+
+  const { getShowMultipleTab, getTabsStyle } = useMultipleTabSetting();
+
+  const getShowMenuRef = computed(() => {
+    return unref(getShowMenu) && !unref(getIsHorizontal);
+  });
+
+  const { getOpenPageLoading, getBasicTransition, getEnableTransition, getOpenNProgress } =
+    useTransitionSetting();
+
+  const getDeftrigger = computed(() => (getSplit.value ? TriggerEnum.HEADER : TriggerEnum.BAR));
+
+  const triggerOptions = computed(() => {
+    return getMenuTriggerOptions(unref(getSplit));
+  });
+</script>
+
+<template>
+  <NDrawer v-model:show="state" :width="330">
+    <NDrawer-content :native-scrollbar="false" closable>
+      <template #header>
+        <NText>{{ t('layout.setting.drawerTitle') }}</NText>
+      </template>
+      <NDivider>{{ t('layout.setting.darkMode') }}</NDivider>
+      <ThemeModePicker />
+
+      <NDivider>{{ t('layout.setting.navMode') }}</NDivider>
+      <LayoutModePicker />
+      <NDivider>{{ t('layout.setting.color') }}</NDivider>
+      <ThemeColorPicker
+        :title="t('layout.setting.primaryColor')"
+        :event="HandlerEnum.CHANGE_THEME_COLOR"
+        :val="getThemeColor"
+        :swatches="APP_PRESET_COLOR_LIST"
+        :show-alpha="false"
+      />
+      <NDivider>{{ t('layout.setting.interfaceFunction') }}</NDivider>
+      <SwitchItem
+        :title="t('layout.setting.splitMenu')"
+        :event="HandlerEnum.MENU_SPLIT"
+        :val="getSplit"
+        :disabled="!getShowMenuRef || getMenuType !== MenuTypeEnum.MIX"
+      />
+
+      <InputNumberItem
+        :title="t('layout.setting.expandedMenuWidth')"
+        :max="600"
+        :min="100"
+        :event="HandlerEnum.MENU_WIDTH"
+        :disabled="false"
+        :val="getMenuWidth"
+      />
+
+      <SliderItem
+        :title="t('layout.setting.menuRootIndent')"
+        :max="64"
+        :min="16"
+        :step="1"
+        :format-tooltip="(val) => `${val}px`"
+        :event="HandlerEnum.MENU_ROOT_INDENT"
+        :disabled="false"
+        :val="getMenuRootIndent"
+      />
+
+      <SliderItem
+        :title="t('layout.setting.menuIndent')"
+        :max="64"
+        :min="16"
+        :step="1"
+        :format-tooltip="(val) => `${val}px`"
+        :event="HandlerEnum.MENU_INDENT"
+        :disabled="false"
+        :val="getMenuIndent"
+      />
+
+      <SelectItem
+        :title="t('layout.setting.menuCollapseButton')"
+        :event="HandlerEnum.MENU_TRIGGER"
+        :val="getTrigger"
+        :default-value="getDeftrigger"
+        :options="triggerOptions"
+        :disabled="!getShowMenuRef"
+      />
+      <NDivider>{{ t('layout.setting.interfaceDisplay') }}</NDivider>
+      <SwitchItem
+        :title="t('layout.setting.breadcrumb')"
+        :event="HandlerEnum.SHOW_BREADCRUMB"
+        :val="getShowBreadCrumb"
+        :disabled="!getShowHeader"
+      />
+      <SwitchItem
+        :title="t('layout.setting.breadcrumbIcon')"
+        :event="HandlerEnum.SHOW_BREADCRUMB_ICON"
+        :val="getShowBreadCrumbIcon"
+        :disabled="!getShowHeader"
+      />
+      <SwitchItem
+        :title="t('layout.setting.tabs')"
+        :event="HandlerEnum.TABS_SHOW"
+        :val="getShowMultipleTab"
+      />
+
+      <SelectItem
+        :title="t('layout.setting.tabsStyle')"
+        :event="HandlerEnum.TABS_STYLE"
+        :val="getTabsStyle"
+        :default-value="TabsStyleEnum.BUTTON"
+        :options="tabsTransitionOptions"
+        :disabled="!getShowMultipleTab"
+      />
+
+      <SwitchItem
+        :title="t('layout.setting.footer')"
+        :event="HandlerEnum.SHOW_FOOTER"
+        :val="getShowFooter"
+      />
+      <NDivider>{{ t('layout.setting.animation') }}</NDivider>
+
+      <SwitchItem
+        :title="t('layout.setting.progress')"
+        :event="HandlerEnum.OPEN_PROGRESS"
+        :val="getOpenNProgress"
+      />
+      <SwitchItem
+        :title="t('layout.setting.switchLoading')"
+        :event="HandlerEnum.OPEN_PAGE_LOADING"
+        :val="getOpenPageLoading"
+      />
+
+      <SwitchItem
+        :title="t('layout.setting.switchAnimation')"
+        :event="HandlerEnum.OPEN_ROUTE_TRANSITION"
+        :val="getEnableTransition"
+      />
+
+      <SelectItem
+        :title="t('layout.setting.animationType')"
+        :event="HandlerEnum.ROUTER_TRANSITION"
+        :val="getBasicTransition"
+        :options="routerTransitionOptions"
+        :disabled="!getEnableTransition"
+      />
+
+      <NDivider />
+
+      <SettingFooter />
+    </NDrawer-content>
+  </NDrawer>
+</template>

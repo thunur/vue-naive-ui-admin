@@ -1,0 +1,16 @@
+@import 'transition/index.less';
+@import 'var/index.less';
+
+a:focus, a:active, button, div, svg, span {
+	outline: none!important;
+}
+
+// 拖拽时的样式
+.drap-tabs {
+	transition: background-color var(--app-transition-duration) var(--app-bezier),
+		border-color var(--app-transition-duration) var(--app-bezier);
+	background-color: #dbeafe !important;
+	.n-tabs-tab {
+		background-color: transparent !important;
+	}
+}

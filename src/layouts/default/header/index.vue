@@ -1,0 +1,169 @@
+<template>
+  <n-layout-header
+    :class="[prefixCls, { inverted: getInverted }]"
+    class="w-full overflow-hidden"
+    :inverted="getInverted"
+  >
+    <div :class="`${prefixCls}_header`" v-if="getShowHeader">
+      <div class="*hb-layout h-full text-1.2em">
+        <div class="*hb-layout h-full">
+          <div v-if="getShowLogo" class="*vs-layout h-full">
+            <AppLogo
+              :collapsed="getCollapsed"
+              collapsed-show-title
+              :title-color="getInverted ? 'white' : undefined"
+            />
+          </div>
+          <Trigger
+            v-if="getShowTrigger || getIsMobile"
+            :type="TriggerEnum.HEADER"
+            :collapsed="getCollapsed"
+          />
+          <LayoutBreadcrumb v-if="getShowContent && getShowBread && !getIsMobile" class="ml-3" />
+        </div>
+        <div
+          v-if="getShowTopMenu && !getIsMobile"
+          class="*hb-layout flex-1 min-w-0 px-2 relative h-full"
+          ref="scrollEl"
+        >
+          <ScrollContainer x-scrollable :inverted="getInverted" class="absolute left-0 top-2px">
+            <LayoutMenu
+              :menu-mode="getMenuMode"
+              :split-type="getSplitType"
+              :inverted="getInverted"
+            />
+          </ScrollContainer>
+        </div>
+        <div class="*vs-layout h-full">
+          <AppSearch class="app-layout-header-anction-icon" />
+          <Notify v-if="!getIs2xs" />
+          <AppLocalePicker
+            v-if="getShowLocalePicker"
+            trigger-cls="app-layout-header-anction-icon"
+          />
+          <FullScreen v-if="!getIs2xs" />
+          <AppDarkModeToggle class="app-layout-header-anction-icon" />
+          <UserDropDown v-if="!getIs2xs" />
+          <SettingDrawer />
+        </div>
+      </div>
+    </div>
+    <MTabs />
+  </n-layout-header>
+</template>
+<script lang="ts">
+  import { defineComponent, unref, computed } from 'vue';
+
+  import { propTypes } from '/@/utils/propTypes';
+  import { LayoutBreadcrumb, FullScreen, Notify, UserDropDown } from './components';
+  import Trigger from '../trigger/index.vue';
+  import LayoutMenu from '../menu/index.vue';
+
+  import { useHeaderSetting } from '/@/hooks/setting/useHeaderSetting';
+  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
+  import { useDesign } from '/@/hooks/web/useDesign';
+  import { useAppInject } from '/@/hooks/web/useAppInject';
+  import { useBreakpoint } from '/@/hooks/event/useBreakpoint';
+
+  import { createAsyncComponent } from '/@/utils/factory/createAsyncComponent';
+  import { useLocale } from '/@/locales/useLocale';
+
+  import { MenuModeEnum, MenuSplitTypeEnum, TriggerEnum } from '/@/enums/menuEnum';
+  import MTabs from '../tabs/index.vue';
+
+  export default defineComponent({
+    name: 'LayoutHeader',
+    components: {
+      Trigger,
+      LayoutBreadcrumb,
+      LayoutMenu,
+      FullScreen,
+      Notify,
+      UserDropDown,
+      SettingDrawer: createAsyncComponent(() => import('/@/layouts/default/setting/index.vue'), {
+        loading: true,
+        size: 16,
+      }),
+      MTabs,
+    },
+    props: {
+      fixed: propTypes.bool,
+    },
+    setup() {
+      const { prefixCls } = useDesign('layout-header');
+      const { getIsMobile } = useAppInject();
+      const { smaller, sizeEnum } = useBreakpoint();
+      const getIs2xs = smaller(sizeEnum.XXS);
+
+      const {
+        getSplit,
+        getCollapsed,
+        getMenuInverted,
+        getShowTopMenu,
+        getIsSidebarType,
+        getIsMixSidebar,
+        getIsTopMenu,
+        getTrigger,
+      } = useMenuSetting();
+      const { getShowBread, getShowContent, getShowHeader } = useHeaderSetting();
+
+      const getShowTrigger = computed(() => {
+        return (
+          getTrigger.value === TriggerEnum.HEADER &&
+          !getIsTopMenu.value &&
+          getShowContent.value &&
+          !getSplit.value
+        );
+      });
+
+      const { getShowLocalePicker } = useLocale();
+
+      const getShowLogo = computed(() => !(unref(getIsSidebarType) || unref(getIsMixSidebar)));
+
+      const getSplitType = computed(() => {
+        return getSplit.value ? MenuSplitTypeEnum.ROOT : MenuSplitTypeEnum.NONE;
+      });
+
+      const getMenuMode = computed(() => {
+        return MenuModeEnum.HORIZONTAL;
+      });
+
+      const getInverted = computed(
+        () => getMenuInverted.value && (getSplit.value || getIsTopMenu.value)
+      );
+
+      return {
+        getShowHeader,
+        getIsMobile,
+        getShowLocalePicker,
+        prefixCls,
+        getShowBread,
+        getShowContent,
+        getShowLogo,
+        getCollapsed,
+        getShowTopMenu,
+        getShowTrigger,
+        TriggerEnum,
+        getSplitType,
+        getMenuMode,
+        getInverted,
+        getIs2xs,
+      };
+    },
+  });
+</script>
+<style lang="less">
+  @prefix-cls: ~'@{namespace}-layout-header';
+
+  .@{prefix-cls} {
+    grid-area: header;
+    --hover-color: var(--app-hover-color);
+    &.inverted {
+      --hover-color: rgba(255, 255, 255, 0.09);
+    }
+    &_header {
+      height: @header-height;
+      border-bottom: 1px solid var(--n-border-color);
+    }
+  }
+</style>

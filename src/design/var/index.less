@@ -1,0 +1,15 @@
+@import './easing.less';
+
+@namespace: aso;
+
+// tabs
+@multiple-height: 32px;
+
+// headers
+@header-height: 50px;
+
+.bem(@n; @content) {
+  @{namespace}-@{n} {
+    @content();
+  }
+}

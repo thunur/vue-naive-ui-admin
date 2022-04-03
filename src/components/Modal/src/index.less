@@ -1,0 +1,67 @@
+@prefix-cls: ~'@{namespace}-basic-modal';
+.fullscreen-modal {
+	overflow: hidden;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 100vh;
+
+	.n-card__content {
+		height: 100%;
+	}
+}
+.@{prefix-cls} {
+	width: 520px;
+  padding-bottom: 0;
+	.n-card-header {
+		border-bottom: var(--app-border-color) 1px solid;
+		padding: 16px;
+		position: relative;
+		.n-card-header__extra {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 10;
+			padding: 0 16px 0 0;
+			transition: color 0.3s;
+		}
+	}
+	& .n-card__action,
+	& .n-card__footer {
+		border-top: var(--app-border-color) 1px solid;
+		padding: 10px 16px !important;
+	}
+	& .aso-basic-title {
+		cursor: move;
+	}
+	.n-card__content > .scrollbar {
+    padding: 14px;
+  }
+
+  .n-card__content {
+    padding: 0;
+
+    > .scrollbar > .scrollbar__bar.is-horizontal {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .n-modal {
+    top: 60px;
+  }
+}
+@media screen and (max-height: 540px) {
+  .n-modal {
+    top: 30px;
+  }
+}
+@media screen and (max-height: 480px) {
+  .n-modal {
+    top: 10px;
+  }
+}

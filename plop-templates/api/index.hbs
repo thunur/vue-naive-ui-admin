@@ -1,0 +1,13 @@
+import { BaseService, Service } from '/@/service/common';
+
+@Service('{{ address }}')
+class {{ titleCase name }} extends BaseService {
+    // 默认继承了page、add、list、info、delete、update请求，如其他请求可在此自行编写
+    // 使用
+    // import { useService } from '@/hooks/service';
+    // const service = useService();
+    // service.文件路径+文件名.请求的方法().then()
+    // 例如/api/common文件夹只需要service.common.page().then()
+}
+
+export default {{ titleCase name }};
