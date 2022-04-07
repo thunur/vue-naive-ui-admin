@@ -1,14 +1,17 @@
 <template>
-  <PageWrapper
-    title="modal组件使用示例"
-    content="使用 useModal 进行弹窗操作，默认可以拖动，可以通过 draggable 参数进行控制是否可以拖动，双击标题可最大化切换"
-  >
-    <n-card>
-      <n-button @click="openModalLoading">尝试一下</n-button>
-    </n-card>
+  <PageWrapper title="modal组件使用示例">
+    <NAlert
+      title="使用 useModal 进行弹窗操作，默认可以拖动，可以通过 draggable 参数进行控制是否可以拖动/全屏，并演示了在Modal内动态加载内容并自动调整高度"
+      type="info"
+      show-icon
+      class="mb-10px"
+    />
+    <n-button type="primary" @click="openModalLoading" class="mb-10px">
+      打开弹窗,加载动态数据并自动调整高度(默认可以拖动/全屏)
+    </n-button>
     <component :is="currentModal" v-model:show="modalShow" :userData="userData" />
-    <NAlert message="自适应高度" show-icon />
-    <n-button type="primary" class="my-4" @click="openTargetModal(3)"> 打开弹窗 </n-button>
+    <NAlert title="自适应高度" type="info" show-icon class="mb-10px" />
+    <n-button type="primary" @click="openTargetModal(3)"> 打开弹窗 </n-button>
     <Modal1 @register="register1" :minHeight="100" />
     <Modal2 @register="register2" />
     <Modal3 @register="register3" />

@@ -16,7 +16,12 @@
       <n-tooltip placement="bottom" v-else>
         <template #trigger>
           <span>
-            <Icon icon="ant-design:fullscreen-outlined" role="full" @click="handleFullScreen" />
+            <Icon
+              class="text-18px"
+              icon="ant-design:fullscreen-outlined"
+              role="full"
+              @click="handleFullScreen"
+            />
           </span>
         </template>
         {{ t('component.modal.maximize') }}
@@ -25,7 +30,12 @@
     <n-tooltip placement="bottom">
       <template #trigger>
         <span>
-          <Icon icon="ant-design:close-outlined" role="close" @click="handleCancel" />
+          <Icon
+            class="text-18px"
+            icon="ant-design:close-outlined"
+            role="close"
+            @click="handleCancel"
+          />
         </span>
       </template>
       {{ t('component.modal.close') }}

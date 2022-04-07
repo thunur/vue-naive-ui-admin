@@ -79,6 +79,7 @@
     siderBorderColorInverted: sbci,
   } = getNaiveCssVars('Layout');
   const { siderColor: dark_sc, siderBorderColor: dark_sbc } = getNaiveCssVars('Layout', true);
+
   const getSiderBgColor = computed(() =>
     unref(getIsDarkMode) ? dark_sc : unref(getInverted) ? sci : sc
   );
