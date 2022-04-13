@@ -1,0 +1,1 @@
+import{G as s,V as a,W as t,X as e,Y as l,aF as n,as as r,N as o,aO as p,aL as i}from"./vendor.07696a3b.js";const u=s({props:{title:String},setup:s=>(u,c)=>{const f=p,d=i;return a(),t(d,{justify:"space-between",align:"center",class:"py-2 min-h-52px"},{default:e((()=>[l(f,null,{default:e((()=>[n(r(s.title),1)])),_:1}),o(u.$slots,"default")])),_:3})}});export{u as _};

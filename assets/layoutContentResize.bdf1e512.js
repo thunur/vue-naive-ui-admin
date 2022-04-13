@@ -1,0 +1,1 @@
+import{a4 as t,aR as o,bd as s}from"./vendor.07696a3b.js";const e=Symbol(),n=(n,a=!0)=>{const{on:i,off:r,reset:f,emit:m}=t(null!=n?n:e);let c,u;function l(t){const o=t||c||u;o&&r(o)}return o((()=>{a&&l()})),{on:function(t,{wait:o=150,immediate:e=!1,isPassPars:n=!0}={}){c=s(t,o),u=()=>{c()},i(n?c:()=>{c()}),e&&m()},off:l,reset:f,emit:m}};export{n as u};

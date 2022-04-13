@@ -1,0 +1,1 @@
+window.__PRODUCTION__ASO_DESIGN__CONF__={"VITE_GLOB_APP_TITLE":"Aso.design","VITE_GLOB_APP_SHORT_NAME":"aso_design","VITE_GLOB_API_URL":"/basic-api","VITE_GLOB_UPLOAD_URL":"/upload","VITE_GLOB_API_URL_PREFIX":""};Object.freeze(window.__PRODUCTION__ASO_DESIGN__CONF__);Object.defineProperty(window,"__PRODUCTION__ASO_DESIGN__CONF__",{configurable:false,writable:false,});

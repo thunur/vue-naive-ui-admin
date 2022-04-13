@@ -1,0 +1,1 @@
+import{G as s,a9 as a,ao as e,as as t,V as n}from"./vendor.07696a3b.js";const o={class:"h-screen flex justify-center items-center"},r=s({setup:s=>(s,r)=>(n(),a("div",o,[e("span",null,t("一个在DefaultLayout外的组件，可以进行一些测试用例。"))]))});export{r as default};

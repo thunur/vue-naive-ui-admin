@@ -1,0 +1,1 @@
+@keyframes tick{0%{stroke-dashoffset:350}to{stroke-dashoffset:0}}.aso-setting-picker-tick{animation:tick .6s cubic-bezier(.3,.35,.08,1);animation-fill-mode:forwards}
