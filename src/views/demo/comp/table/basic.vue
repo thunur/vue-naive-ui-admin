@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { h, reactive, ref } from 'vue';
+  import { h, reactive, ref, unref } from 'vue';
   import { useMessage } from 'naive-ui';
   import { BasicTable, TableAction, BasicColumn } from '/@/components/Table';
   import { BasicForm, useForm } from '/@/components/Form/index';
@@ -64,8 +64,8 @@
     date: null,
   });
   const params = ref({
-    pageSize: 5,
-    name: 'xiaoMa',
+    page: 1,
+    pageSize: 10,
   });
   const actionColumn = reactive<BasicColumn>({
     width: 220,
@@ -137,9 +137,8 @@
   }
 
   const loadDataTable = async (res) => {
-    const sdf = await service.demo.table.demoListApi({ ...formParams, ...params.value, ...res });
-    console.log(sdf, 'sdf');
-    return sdf;
+    const data = await service.demo.table.demoListApi({ ...formParams, ...params.value, ...res });
+    return data;
   };
   function onCheckedRow(rowKeys) {
     console.log(rowKeys);

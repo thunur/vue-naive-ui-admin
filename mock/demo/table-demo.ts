@@ -39,6 +39,7 @@ export default [
     method: 'get',
     response: ({ query }) => {
       const { page = 1, pageSize = 10 } = query;
+console.log(query);
       const items = demoList(Number(pageSize));
       return resultSuccess({ page: Number(page), pageSize: Number(pageSize), total: 45, items });
     },
