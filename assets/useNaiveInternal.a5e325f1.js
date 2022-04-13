@@ -1,1 +1,0 @@
-import{u as o}from"./useRootSetting.c202e687.js";import{m as s,b1 as t,A as r,q as e}from"./vendor.07696a3b.js";function n(o,r=!1){const e=r?s:t;return e[o].self(e.common)}function a(s,t){if(!r())return;const{getIsDarkMode:a}=o(),u=n(s),m=n(s,!0);return e((()=>a.value?m[t]:u[t]))}export{a,n as g};
