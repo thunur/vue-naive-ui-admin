@@ -21,7 +21,7 @@
     "release": "standard-version",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "svgo": "svgo -f ./src/assets/icons",
-		"ghpages":  "cross-env NODE_ENV=production vite build --base=/naive-admin/ && esno ./build/script/postBuild.ts",
+    "ghpages": "cross-env NODE_ENV=production vite build --base=/naive-admin/ && esno ./build/script/postBuild.ts",
     "prepare": "husky install"
   },
   "resolutions": {
@@ -62,6 +62,7 @@
     "@commitlint/config-conventional": "^15.0.0",
     "@iconify/json": "^2.1.12",
     "@iconify/vue": "^3.1.4",
+    "@tauri-apps/cli": "^1.1.1",
     "@types/crypto-js": "^4.1.1",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash-es": "^4.17.6",
