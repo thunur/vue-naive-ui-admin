@@ -29,7 +29,7 @@ export function useModalDragMove(context: UseModalDragMoveContext) {
     title.style.cursor = 'move';
 
     const screenWidth = document.body.clientWidth; // body当前宽度
-    const screenHeight = document.documentElement.clientHeight; // 可见区域高度
+    const screenHeight = document.body.clientHeight; // 可见区域高度
 
     const dragDomW = target.offsetWidth; // 对话框宽度
     const dragDomH = target.offsetHeight; // 对话框高度
