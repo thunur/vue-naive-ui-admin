@@ -28,18 +28,6 @@ export function useModalDragMove(context: UseModalDragMoveContext) {
     bar.style.cursor = 'move';
     title.style.cursor = 'move';
 
-    const screenWidth = document.body.clientWidth; // body当前宽度
-    const screenHeight = document.body.clientHeight; // 可见区域高度
-
-    const dragDomW = target.offsetWidth; // 对话框宽度
-    const dragDomH = target.offsetHeight; // 对话框高度
-
-    const minDomLeft = target.offsetLeft;
-    const minDomTop = target.offsetTop;
-
-    const maxDragDomLeft = screenWidth - minDomLeft - dragDomW;
-    const maxDragDomTop = screenHeight - minDomTop - dragDomH;
-
     if (getStyle(target, 'left') !== 'auto') {
       params.left = getStyle(target, 'left');
     }
@@ -48,61 +36,63 @@ export function useModalDragMove(context: UseModalDragMoveContext) {
     }
 
     // o是移动对象
-    bar.onmousedown = function (event) {
-      params.flag = true;
-      if (!event) {
-        // @ts-ignore
-        event = window.event;
-        // 防止IE文字选中
-        bar.onselectstart = function () {
-          return false;
-        };
-      }
-      const e = event;
-      params.currentX = e.clientX;
-      params.currentY = e.clientY;
-    };
-    document.onmouseup = function () {
-      params.flag = false;
-      if (getStyle(target, 'left') !== 'auto') {
-        params.left = getStyle(target, 'left');
-      }
-      if (getStyle(target, 'top') !== 'auto') {
-        params.top = getStyle(target, 'top');
-      }
-    };
-    document.onmousemove = function (event) {
-      const e: any = event || window.event;
-      if (params.flag) {
-        const nowX = e.clientX;
-        const nowY = e.clientY;
-        const disX = nowX - params.currentX;
-        const disY = nowY - params.currentY;
+    bar.onmousedown = function (e) {
+      if (!e) return;
+      // 鼠标按下，计算当前元素距离可视区的距离
+      const disX = e.clientX;
+      const disY = e.clientY;
+      const screenWidth = document.body.clientWidth; // body当前宽度
+      const screenHeight = document.documentElement.clientHeight; // 可见区域高度(应为body高度，可某些环境下无法获取)
 
-        let left = parseInt(params.left) + disX;
-        let top = parseInt(params.top) + disY;
+      const dragDomWidth = target.offsetWidth; // 对话框宽度
+      const dragDomheight = target.offsetHeight; // 对话框高度
 
-        // 拖出屏幕边缘
-        if (-left > minDomLeft) {
-          left = -minDomLeft;
+      const minDragDomLeft = target.offsetLeft;
+
+      const maxDragDomLeft = screenWidth - target.offsetLeft - dragDomWidth;
+      const minDragDomTop = target.offsetTop;
+      const maxDragDomTop = screenHeight - target.offsetTop - dragDomheight;
+      // 获取到的值带px 正则匹配替换
+      const domLeft = getStyle(target, 'left');
+      const domTop = getStyle(target, 'top');
+      let styL = +domLeft;
+      let styT = +domTop;
+
+      // 注意在ie中 第一次获取到的值为组件自带50% 移动之后赋值为px
+      if (domLeft.includes('%')) {
+        styL = +document.body.clientWidth * (+domLeft.replace(/%/g, '') / 100);
+        styT = +document.body.clientHeight * (+domTop.replace(/%/g, '') / 100);
+      } else {
+        styL = +domLeft.replace(/px/g, '');
+        styT = +domTop.replace(/px/g, '');
+      }
+      e.preventDefault();
+      document.onmousemove = function (e) {
+        // 通过事件委托，计算移动的距离
+        let left = e.clientX - disX;
+        let top = e.clientY - disY;
+
+        // 边界处理
+        if (-left > minDragDomLeft) {
+          left = -minDragDomLeft;
         } else if (left > maxDragDomLeft) {
           left = maxDragDomLeft;
         }
 
-        if (-top > minDomTop) {
-          top = -minDomTop;
+        if (-top > minDragDomTop) {
+          top = -minDragDomTop;
         } else if (top > maxDragDomTop) {
           top = maxDragDomTop;
         }
 
-        target.style.left = `${left}px`;
-        target.style.top = `${top}px`;
+        // 移动当前元素
+        target.style.cssText += `;left:${left + styL}px;top:${top + styT}px;`;
+      };
 
-        if (event.preventDefault) {
-          event.preventDefault();
-        }
-        return false;
-      }
+      document.onmouseup = () => {
+        document.onmousemove = null;
+        document.onmouseup = null;
+      };
     };
   };
 
