@@ -1,0 +1,1 @@
+import{d as e,o as s,c as a,a as t,t as n}from"./index-C6F7-JtS.js";const c={class:"h-screen flex justify-center items-center"},i=e({__name:"index",setup:e=>(e,i)=>(s(),a("div",c,[t("span",null,n("一个在DefaultLayout外的组件，可以进行一些测试用例。"))]))});export{i as default};
