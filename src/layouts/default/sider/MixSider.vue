@@ -375,30 +375,32 @@
     &-menu-left {
       .n-menu-item {
         margin-top: 0;
-        &::before {
-          border-radius: 0;
-          left: 0;
-          right: 0;
-          width: 100%;
+        .n-menu-item-content {
+          &::before {
+            border-radius: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+          }
+        }
+        .n-menu-item-content--selected {
+          &::after {
+            z-index: auto;
+            content: '';
+            background-color: var(--app-primary-color);
+            position: absolute;
+            left: 0;
+            width: 4px;
+            top: 0;
+            bottom: 0;
+            pointer-events: none;
+            transition: background-color 0.3s var(--n-bezier);
+          }
         }
         .item_wrapper {
           .aso-svg-icon {
             font-size: 20px;
           }
-        }
-      }
-      .n-menu-item--selected {
-        &::after {
-          z-index: auto;
-          content: '';
-          background-color: var(--app-primary-color);
-          position: absolute;
-          left: 0px;
-          width: 4px;
-          top: 0;
-          bottom: 0;
-          pointer-events: none;
-          transition: background-color 0.3s var(--n-bezier);
         }
       }
     }
