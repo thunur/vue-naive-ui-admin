@@ -1,0 +1,1 @@
+import{D as o,aA as n,cg as t,c9 as a}from"./index-BLWT44Eo.js";let e,s;var i,d;function l(t){if(s)return;let a=!1;o((()=>{s||null==e||e.then((()=>{a||t()}))})),n((()=>{a=!0}))}e=t?null===(d=null===(i=document)||void 0===i?void 0:i.fonts)||void 0===d?void 0:d.ready:void 0,s=!1,void 0!==e?e.then((()=>{s=!0})):s=!0;const{c:c}=a(),u="vueuc-style";export{c as a,u as c,l as o};

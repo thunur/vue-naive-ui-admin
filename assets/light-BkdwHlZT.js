@@ -1,0 +1,1 @@
+import{fs as s,fp as t,f0 as a,fv as o}from"./index-BLWT44Eo.js";import{t as m}from"./light-CNoan_WW.js";import{s as p}from"./light-DFJtCmXp.js";const i=s({name:"DynamicTags",common:t,peers:{Input:a,Button:o,Tag:m,Space:p},self:()=>({inputWidth:"64px"})});export{i as d};

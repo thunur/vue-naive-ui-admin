@@ -1,0 +1,1 @@
+import{fp as o}from"./index-BLWT44Eo.js";const r={name:"Badge",common:o,self:o=>{const{errorColor:r,infoColor:n,successColor:c,warningColor:l,fontFamily:s}=o;return{color:r,colorInfo:n,colorSuccess:c,colorError:r,colorWarning:l,fontSize:"12px",fontFamily:s}}};export{r as b};
