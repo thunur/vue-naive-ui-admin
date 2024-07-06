@@ -16,7 +16,7 @@
         v-if="dropDownActions && getDropdownList.length"
         trigger="hover"
         :options="getDropdownList"
-        @select="(select as Fn)"
+        @select="select as Fn"
       >
         <slot name="more">
           <Icon icon="akar-icons:more-horizontal" class="!ml-4" v-bind="getMoreProps" />
@@ -28,8 +28,8 @@
 
 <script lang="ts">
   import { computed, toRaw } from 'vue';
-  import { usePermission } from '/@/hooks/web/usePermission';
-  import { isBoolean, isFunction } from '/@/utils/is';
+  import { usePermission } from '@/hooks/web/usePermission';
+  import { isBoolean, isFunction } from '@/utils/is';
   import type { DropdownProps } from 'naive-ui';
   import type { dropDownActionItem, ActionItem } from '../../types/tableAction';
   import PopConfirmWrapper from './popConfirmWrapper.vue';

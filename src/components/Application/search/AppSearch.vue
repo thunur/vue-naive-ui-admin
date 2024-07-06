@@ -2,7 +2,7 @@
   import { useMagicKeys } from '@vueuse/core';
   import { defineComponent, ref, unref, watch } from 'vue';
   import AppSearchModal from './AppSearchModal.vue';
-  import Icon from '/@/components/Icon';
+  import Icon from '@/components/Icon';
 
   export default defineComponent({
     name: 'AppSearch',

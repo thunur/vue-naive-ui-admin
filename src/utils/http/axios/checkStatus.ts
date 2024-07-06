@@ -1,9 +1,9 @@
-import type { ErrorMessageMode } from '/#/axios';
-import { useI18n } from '/@/hooks/web/useI18n';
-import useWrapperMessage from '/@/hooks/web/useMessage';
-import { useUserStoreWithOut } from '/@/store/modules/user';
-import projectSetting from '/@/settings/projectSetting';
-import { SessionTimeoutProcessingEnum } from '/@/enums/appEnum';
+import type { ErrorMessageMode } from '#/axios';
+import { useI18n } from '@/hooks/web/useI18n';
+import useWrapperMessage from '@/hooks/web/useMessage';
+import { useUserStoreWithOut } from '@/store/modules/user';
+import projectSetting from '@/settings/projectSetting';
+import { SessionTimeoutProcessingEnum } from '@/enums/appEnum';
 
 const { createMessage, createDialog } = useWrapperMessage();
 const stp = projectSetting.sessionTimeoutProcessing;

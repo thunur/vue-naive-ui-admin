@@ -9,12 +9,12 @@ import {
   whenever,
 } from '@vueuse/core';
 import { unref, watch, computed, ref } from 'vue';
-import { warn } from '/@/utils/log';
-import echarts from '/@/utils/lib/echarts';
+import { warn } from '@/utils/log';
+import echarts from '@/utils/lib/echarts';
 import { useRootSetting } from '../setting/useRootSetting';
-// import { useContentResizeFn } from '/@/layouts/default/content/useContentResizeFn';
-// import { on, off } from '/@/logics/mitt/layoutContentResize';
-import { useLayoutContentResize } from '/@/logics/mitt/layoutContentResize';
+// import { useContentResizeFn } from '@/layouts/default/content/useContentResizeFn';
+// import { on, off } from '@/logics/mitt/layoutContentResize';
+import { useLayoutContentResize } from '@/logics/mitt/layoutContentResize';
 
 type par = {
   chartRef: MaybeElementRef;

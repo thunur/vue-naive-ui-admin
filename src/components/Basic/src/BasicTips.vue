@@ -2,11 +2,11 @@
   import type { CSSProperties, PropType } from 'vue';
   import { defineComponent, computed, unref } from 'vue';
   import { NTooltip } from 'naive-ui';
-  import { getPopupContainer } from '/@/utils';
-  import { isString, isArray } from '/@/utils/is';
-  import { getSlot } from '/@/utils/helper/tsxHelper';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import Icon from '/@/components/Icon';
+  import { getPopupContainer } from '@/utils';
+  import { isString, isArray } from '@/utils/is';
+  import { getSlot } from '@/utils/helper/tsxHelper';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import Icon from '@/components/Icon';
 
   const props = {
     /**

@@ -32,20 +32,20 @@
   import { defineComponent, unref } from 'vue';
   import { useMessage, useDialog } from 'naive-ui';
 
-  import { useAppStore } from '/@/store/modules/app';
-  import { usePermissionStore } from '/@/store/modules/permission';
-  import { useMultipleTabStore } from '/@/store/modules/multipleTab';
-  import { useUserStore } from '/@/store/modules/user';
-  import useChangeTheme from '/@/hooks/web/useChaneTheme';
-  // import { themeState } from '/@/settings/designSetting';
+  import { useAppStore } from '@/store/modules/app';
+  import { usePermissionStore } from '@/store/modules/permission';
+  import { useMultipleTabStore } from '@/store/modules/multipleTab';
+  import { useUserStore } from '@/store/modules/user';
+  import useChangeTheme from '@/hooks/web/useChaneTheme';
+  // import { themeState } from '@/settings/designSetting';
 
-  // import { useDesign } from '/@/hooks/web/useDesign';
-  import { useI18n } from '/@/hooks/web/useI18n';
+  // import { useDesign } from '@/hooks/web/useDesign';
+  import { useI18n } from '@/hooks/web/useI18n';
   import { useClipboard } from '@vueuse/core';
 
-  // import { updateColorWeak } from '/@/logics/theme/updateColorWeak';
-  // import { updateGrayMode } from '/@/logics/theme/updateGrayMode';
-  import defaultSetting from '/@/settings/projectSetting';
+  // import { updateColorWeak } from '@/logics/theme/updateColorWeak';
+  // import { updateGrayMode } from '@/logics/theme/updateGrayMode';
+  import defaultSetting from '@/settings/projectSetting';
 
   export default defineComponent({
     name: 'SettingFooter',

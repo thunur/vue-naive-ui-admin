@@ -1,6 +1,6 @@
-import { createLoading, Loading, LoadingProps } from '/@/components/Loading';
+import { createLoading, Loading, LoadingProps } from '@/components/Loading';
 import { omit } from 'lodash-es';
-import { isNullOrUnDef } from '/@/utils/is';
+import { isNullOrUnDef } from '@/utils/is';
 import type { Directive, App } from 'vue';
 
 function getAllAttribute(el: HTMLElement) {

@@ -7,10 +7,10 @@
 
 <script setup lang="ts">
   import { PropType, useCssVars, computed } from 'vue';
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { propTypes } from '/@/utils/propTypes';
-  import { getNaiveCssVars } from '/@/hooks/core/useNaiveInternal';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { propTypes } from '@/utils/propTypes';
+  import { getNaiveCssVars } from '@/hooks/core/useNaiveInternal';
 
   defineProps({
     collapsed: propTypes.bool.def(false),

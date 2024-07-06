@@ -1,5 +1,5 @@
-import { DemoParams } from '/#/model/demo/tableModel';
-import { BaseService, Service } from '/@/service/common';
+import { DemoParams } from '#/model/demo/tableModel';
+import { BaseService, Service } from '@/service/common';
 
 @Service('demo')
 class Demo extends BaseService {

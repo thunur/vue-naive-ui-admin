@@ -8,7 +8,7 @@
   import type { PropType } from 'vue';
   import { useSlots, computed } from 'vue';
   import BasicTips from './BasicTips.vue';
-  import { useDesign } from '/@/hooks/web/useDesign';
+  import { useDesign } from '@/hooks/web/useDesign';
 
   const props = defineProps({
     /**

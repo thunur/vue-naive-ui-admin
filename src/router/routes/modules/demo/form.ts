@@ -1,6 +1,6 @@
-import type { AppRouteModule } from '/@/router/types';
+import type { AppRouteModule } from '@/router/types';
 
-import { LAYOUT } from '/@/router/constant';
+import { LAYOUT } from '@/router/constant';
 import { t } from '../../../../hooks/web/useI18n';
 
 const routes: AppRouteModule = {
@@ -17,7 +17,7 @@ const routes: AppRouteModule = {
     {
       path: 'base-form',
       name: 'BaseFromPage',
-      component: () => import('/@/views/demo/page/form/basicFormPage.vue'),
+      component: () => import('@/views/demo/page/form/basicFormPage.vue'),
       meta: {
         title: t('routes.demo.page.formBasic'),
       },
@@ -25,7 +25,7 @@ const routes: AppRouteModule = {
     {
       path: 'step-form',
       name: 'StepFormPage',
-      component: () => import('/@/views/demo/page/form/step/stepFormPage.vue'),
+      component: () => import('@/views/demo/page/form/step/stepFormPage.vue'),
       meta: {
         title: t('routes.demo.page.formStep'),
       },
@@ -33,7 +33,7 @@ const routes: AppRouteModule = {
     {
       path: 'high-form',
       name: 'HighFormPage',
-      component: () => import('/@/views/demo/page/form/high/highFormPage.vue'),
+      component: () => import('@/views/demo/page/form/high/highFormPage.vue'),
       meta: {
         title: t('routes.demo.page.formHigh'),
       },

@@ -1,6 +1,6 @@
 import { HandlerEnum } from './enum';
-import { useAppStore } from '/@/store/modules/app';
-import { ProjectConfig } from '/#/config';
+import { useAppStore } from '@/store/modules/app';
+import { ProjectConfig } from '#/config';
 
 import { useRootSetting } from '../../../hooks/setting/useRootSetting';
 

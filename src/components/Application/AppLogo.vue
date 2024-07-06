@@ -22,17 +22,17 @@
   import { computed, CSSProperties, ref, unref, watch } from 'vue';
   import { useRafFn, useEventListener, unrefElement, Pausable } from '@vueuse/core';
   import { clamp } from 'lodash-es';
-  import { layoutSiderCollapsedWidth } from '/@/settings/designSetting';
+  import { layoutSiderCollapsedWidth } from '@/settings/designSetting';
   import { formatLength } from 'naive-ui/lib/_utils';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
-  import { useGlobSetting } from '/@/hooks/setting';
-  import { useGo } from '/@/hooks/web/usePage';
-  import { useAppInject } from '/@/hooks/web/useAppInject';
-  import { PageEnum } from '/@/enums/pageEnum';
-  import { useUserStore } from '/@/store/modules/user';
-  import { propTypes } from '/@/utils/propTypes';
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
+  import { useGlobSetting } from '@/hooks/setting';
+  import { useGo } from '@/hooks/web/usePage';
+  import { useAppInject } from '@/hooks/web/useAppInject';
+  import { PageEnum } from '@/enums/pageEnum';
+  import { useUserStore } from '@/store/modules/user';
+  import { propTypes } from '@/utils/propTypes';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
 
   const props = defineProps({
     logoSize: propTypes.stringNumber.def(32),

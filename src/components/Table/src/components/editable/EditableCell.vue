@@ -23,7 +23,7 @@
       </div>
       <div v-if="!getRowEditable" class="editable-cell-action">
         <n-icon class="mx-2 cursor-pointer">
-          <Icon icon="ant-design:check-outlined" @click="(handleSubmit as Fn)" />
+          <Icon icon="ant-design:check-outlined" @click="handleSubmit as Fn" />
         </n-icon>
         <n-icon class="mx-2 cursor-pointer">
           <Icon icon="ant-design:close-outlined" @click="handleCancel" />
@@ -41,9 +41,9 @@
   import type { EditRecordRow } from './index';
   import { CellComponent } from './CellComponent';
   import { useTableContext } from '../../hooks/useTableContext';
-  import clickOutside from '/@/directives/clickOutside';
-  import { propTypes } from '/@/utils/propTypes';
-  import { isString, isBoolean, isFunction, isNumber, isArray } from '/@/utils/is';
+  import clickOutside from '@/directives/clickOutside';
+  import { propTypes } from '@/utils/propTypes';
+  import { isString, isBoolean, isFunction, isNumber, isArray } from '@/utils/is';
   import { createPlaceholderMessage } from './helper';
   import { EventEnum } from '../../componentMap';
 

@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-  import { useDesign } from '/@/hooks/web/useDesign';
+  import { useDesign } from '@/hooks/web/useDesign';
   interface Emits {
     /** 点击关闭图标 */
     (e: 'close'): void;

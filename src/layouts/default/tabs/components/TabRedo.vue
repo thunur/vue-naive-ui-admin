@@ -13,8 +13,8 @@
 </template>
 <script setup lang="ts">
   import { ref } from 'vue';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useTabs } from '/@/hooks/web/useTabs';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useTabs } from '@/hooks/web/useTabs';
   import getCommonCls from './useExtra';
 
   const loading = ref(false);

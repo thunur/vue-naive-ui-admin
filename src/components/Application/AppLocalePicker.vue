@@ -15,9 +15,9 @@
 <script lang="ts" setup>
   import { ref, watchEffect, unref, computed, h } from 'vue';
   import { SelectOption, SelectGroupOption } from 'naive-ui';
-  import type { LocaleType } from '/#/config';
-  import { useLocale } from '/@/locales/useLocale';
-  import { localeList } from '/@/settings/localeSetting';
+  import type { LocaleType } from '#/config';
+  import { useLocale } from '@/locales/useLocale';
+  import { localeList } from '@/settings/localeSetting';
 
   const props = defineProps({
     /**

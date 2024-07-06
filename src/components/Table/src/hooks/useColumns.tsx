@@ -2,12 +2,12 @@ import { ref, Ref, ComputedRef, unref, computed, watch, toRaw } from 'vue';
 import { isEqual, cloneDeep } from 'lodash-es';
 import { NTooltip } from 'naive-ui';
 import type { BasicColumn, BasicTableProps } from '../types/table';
-import { isArray, isString, isBoolean, isFunction } from '/@/utils/is';
-import { usePermission } from '/@/hooks/web/usePermission';
-import { ActionItem } from '/@/components/Table';
+import { isArray, isString, isBoolean, isFunction } from '@/utils/is';
+import { usePermission } from '@/hooks/web/usePermission';
+import { ActionItem } from '@/components/Table';
 import { renderEditCell } from '../components/editable';
 
-import Icon from '/@/components/Icon';
+import Icon from '@/components/Icon';
 
 export function useColumns(propsRef: ComputedRef<BasicTableProps>) {
   const columnsRef = ref(unref(propsRef).columns) as unknown as Ref<BasicColumn[]>;
@@ -58,8 +58,8 @@ export function useColumns(propsRef: ComputedRef<BasicTableProps>) {
                   {{
                     trigger: () => (
                       <span>
-                        <span class='mr-5px'>{title}</span>
-                          <Icon class="text-14px" icon="ant-design:form-outlined" />
+                        <span class="mr-5px">{title}</span>
+                        <Icon class="text-14px" icon="ant-design:form-outlined" />
                       </span>
                     ),
                     default: () => '该列可编辑',

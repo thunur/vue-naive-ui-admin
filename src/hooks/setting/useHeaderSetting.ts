@@ -1,12 +1,12 @@
-import type { HeaderSetting } from '/#/config';
+import type { HeaderSetting } from '#/config';
 
 import { computed, unref } from 'vue';
 
-import { useAppStore } from '/@/store/modules/app';
+import { useAppStore } from '@/store/modules/app';
 
 import { useMenuSetting } from './useMenuSetting';
 import { useRootSetting } from './useRootSetting';
-import { MenuModeEnum } from '/@/enums/menuEnum';
+import { MenuModeEnum } from '@/enums/menuEnum';
 
 export function useHeaderSetting() {
   const appStore = useAppStore();

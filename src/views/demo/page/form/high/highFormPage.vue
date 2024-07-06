@@ -27,7 +27,7 @@
 </script>
 
 <script setup lang="ts">
-  import { useForm } from '/@/components/Form';
+  import { useForm } from '@/components/Form';
   import { useMessage } from 'naive-ui';
   import PersonTable from './PersonTable.vue';
   import { schemas, taskSchemas } from './data';

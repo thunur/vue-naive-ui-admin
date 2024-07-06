@@ -26,12 +26,12 @@
   import { useRoute } from 'vue-router';
   import { useElementSize, MaybeElementRef, useResizeObserver, promiseTimeout } from '@vueuse/core';
   import { ScrollbarInst } from 'naive-ui';
-  import PageLayout from '/@/layouts/page/index.vue';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
-  import { useTransitionSetting } from '/@/hooks/setting/useTransitionSetting';
-  import { listenerAfterRouteChange } from '/@/logics/mitt/routeChange';
-  import { useLayoutContentResize } from '/@/logics/mitt/layoutContentResize';
+  import PageLayout from '@/layouts/page/index.vue';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
+  import { useTransitionSetting } from '@/hooks/setting/useTransitionSetting';
+  import { listenerAfterRouteChange } from '@/logics/mitt/routeChange';
+  import { useLayoutContentResize } from '@/logics/mitt/layoutContentResize';
   import { createContentSizeContext } from './useContentSizeContext';
 
   const scrollBarEl = ref<ScrollbarInst>();

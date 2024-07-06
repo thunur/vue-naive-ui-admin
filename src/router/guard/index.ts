@@ -1,16 +1,16 @@
 import type { Router } from 'vue-router';
-import { useAppStoreWithOut } from '/@/store/modules/app';
-import { useUserStoreWithOut } from '/@/store/modules/user';
+import { useAppStoreWithOut } from '@/store/modules/app';
+import { useUserStoreWithOut } from '@/store/modules/user';
 import { useTransitionSetting } from '../../hooks/setting/useTransitionSetting';
-import { AxiosCanceler } from '/@/utils/http/axios/axiosCancel';
+import { AxiosCanceler } from '@/utils/http/axios/axiosCancel';
 import useWrapperMessage from '../../hooks/web/useMessage';
-import { warn } from '/@/utils/log';
+import { warn } from '@/utils/log';
 import { ref, unref } from 'vue';
-import { setRouteChange, setAfterRouteChange } from '/@/logics/mitt/routeChange';
+import { setRouteChange, setAfterRouteChange } from '@/logics/mitt/routeChange';
 import { LoadingBarProviderInst } from 'naive-ui';
 import { createPermissionGuard } from './permissionGuard';
 import { createStateGuard } from './stateGuard';
-import projectSetting from '/@/settings/projectSetting';
+import projectSetting from '@/settings/projectSetting';
 
 export const loadingBarApiRef = ref<LoadingBarProviderInst>();
 

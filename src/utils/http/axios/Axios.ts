@@ -1,12 +1,12 @@
 import type { AxiosRequestConfig, AxiosInstance, AxiosResponse, AxiosError } from 'axios';
-import type { RequestOptions, Result, UploadFileParams } from '/#/axios';
+import type { RequestOptions, Result, UploadFileParams } from '#/axios';
 import type { CreateAxiosOptions } from './axiosTransform';
 import axios from 'axios';
 import qs from 'qs';
 import { AxiosCanceler } from './axiosCancel';
-import { isFunction } from '/@/utils/is';
+import { isFunction } from '@/utils/is';
 import { cloneDeep, omit } from 'lodash-es';
-import { ContentTypeEnum, RequestEnum } from '/@/enums/httpEnum';
+import { ContentTypeEnum, RequestEnum } from '@/enums/httpEnum';
 
 export * from './axiosTransform';
 

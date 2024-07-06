@@ -12,13 +12,13 @@
     InputNumberItem,
   } from './components';
 
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
-  import { useHeaderSetting } from '/@/hooks/setting/useHeaderSetting';
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
-  import { useMultipleTabSetting } from '/@/hooks/setting/useMultipleTabSetting';
-  import { useTransitionSetting } from '/@/hooks/setting/useTransitionSetting';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
+  import { useHeaderSetting } from '@/hooks/setting/useHeaderSetting';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
+  import { useMultipleTabSetting } from '@/hooks/setting/useMultipleTabSetting';
+  import { useTransitionSetting } from '@/hooks/setting/useTransitionSetting';
 
-  import { MenuTypeEnum, TriggerEnum, TabsStyleEnum } from '/@/enums/menuEnum';
+  import { MenuTypeEnum, TriggerEnum, TabsStyleEnum } from '@/enums/menuEnum';
   import {
     HandlerEnum,
     routerTransitionOptions,
@@ -26,10 +26,10 @@
     tabsTransitionOptions,
   } from './enum';
 
-  import { useI18n } from '/@/hooks/web/useI18n';
-  import { useDrawer, useDrawerEnum } from '/@/hooks/component/useDrawer';
+  import { useI18n } from '@/hooks/web/useI18n';
+  import { useDrawer, useDrawerEnum } from '@/hooks/component/useDrawer';
 
-  import { APP_PRESET_COLOR_LIST } from '/@/settings/designSetting';
+  import { APP_PRESET_COLOR_LIST } from '@/settings/designSetting';
 
   const { t } = useI18n();
   const [state] = useDrawer(useDrawerEnum.AppConfigDrawer);

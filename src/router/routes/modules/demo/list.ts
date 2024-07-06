@@ -1,6 +1,6 @@
-import type { AppRouteModule } from '/@/router/types';
+import type { AppRouteModule } from '@/router/types';
 
-import { LAYOUT } from '/@/router/constant';
+import { LAYOUT } from '@/router/constant';
 import { t } from '../../../../hooks/web/useI18n';
 
 const routes: AppRouteModule = {
@@ -17,7 +17,7 @@ const routes: AppRouteModule = {
     {
       path: 'base-list',
       name: 'BaseListPage',
-      component: () => import('/@/views/demo/page/list/basicListPage.vue'),
+      component: () => import('@/views/demo/page/list/basicListPage.vue'),
       meta: {
         title: t('routes.demo.page.listBasic'),
       },
@@ -25,7 +25,7 @@ const routes: AppRouteModule = {
     {
       path: 'card-list',
       name: 'CardListPage',
-      component: () => import('/@/views/demo/page/list/cardListPage.vue'),
+      component: () => import('@/views/demo/page/list/cardListPage.vue'),
       meta: {
         title: t('routes.demo.page.listCard'),
       },

@@ -1,10 +1,10 @@
-import type { AppRouteModule } from '/@/router/types';
+import type { AppRouteModule } from '@/router/types';
 
-import { LAYOUT } from '/@/router/constant';
-import { ExceptionEnum } from '/@/enums/exceptionEnum';
-import { t } from '/@/hooks/web/useI18n';
+import { LAYOUT } from '@/router/constant';
+import { ExceptionEnum } from '@/enums/exceptionEnum';
+import { t } from '@/hooks/web/useI18n';
 
-const ExceptionPage = () => import('/@/views/sys/exception/Exception.vue');
+const ExceptionPage = () => import('@/views/sys/exception/Exception.vue');
 
 const routes: AppRouteModule = {
   path: '/exception',

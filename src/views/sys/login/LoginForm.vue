@@ -99,12 +99,12 @@
 <script lang="ts" setup>
   import { reactive, ref, toRaw, unref, computed } from 'vue';
 
-  import { useI18n } from '/@/hooks/web/useI18n';
-  import useWrapperMessage from '/@/hooks/web/useMessage';
+  import { useI18n } from '@/hooks/web/useI18n';
+  import useWrapperMessage from '@/hooks/web/useMessage';
 
-  import { useUserStore } from '/@/store/modules/user';
+  import { useUserStore } from '@/store/modules/user';
   import { LoginStateEnum, useLoginState, useFormRules, useFormValid } from './useLogin';
-  import { useDesign } from '/@/hooks/web/useDesign';
+  import { useDesign } from '@/hooks/web/useDesign';
 
   const { t } = useI18n();
   const { notification, createDialog } = useWrapperMessage();

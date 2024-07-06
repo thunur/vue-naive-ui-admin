@@ -13,9 +13,9 @@
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import useChangeTheme from '/@/hooks/web/useChaneTheme';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useI18n } from '/@/hooks/web/useI18n';
+  import useChangeTheme from '@/hooks/web/useChaneTheme';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useI18n } from '@/hooks/web/useI18n';
 
   import Picker from './Picker.vue';
 

@@ -1,6 +1,6 @@
 import { defineAsyncComponent, AsyncComponentOptions } from 'vue';
 import { NSpin } from 'naive-ui';
-import { noop } from '/@/utils/index';
+import { noop } from '@/utils/index';
 
 interface Options extends AsyncComponentOptions {
   size?: 'small' | 'medium' | 'large' | number;

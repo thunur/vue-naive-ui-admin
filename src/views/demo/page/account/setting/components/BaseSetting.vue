@@ -25,11 +25,11 @@
 <script setup lang="ts">
   import { computed, onMounted } from 'vue';
   import { useMessage } from 'naive-ui';
-  import { useUserStore } from '/@/store/modules/user';
-  import { useForm } from '/@/components/Form/index';
+  import { useUserStore } from '@/store/modules/user';
+  import { useForm } from '@/components/Form/index';
 
   import { schemas } from './data';
-  import { useServiceStore } from '/@/store/modules/service';
+  import { useServiceStore } from '@/store/modules/service';
 
   const { service } = useServiceStore();
   const userStore = useUserStore();

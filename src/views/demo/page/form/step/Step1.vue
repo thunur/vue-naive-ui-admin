@@ -22,7 +22,7 @@
 </template>
 <script setup lang="ts">
   import { step1Schemas } from './data';
-  import { useForm } from '/@/components/Form';
+  import { useForm } from '@/components/Form';
 
   const emit = defineEmits(['next']);
 

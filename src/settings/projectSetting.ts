@@ -1,12 +1,12 @@
-import type { ProjectConfig } from '/#/config';
+import type { ProjectConfig } from '#/config';
 import {
   MenuTypeEnum,
   MenuModeEnum,
   TriggerEnum,
   MixSidebarTriggerEnum,
   TabsStyleEnum,
-} from '/@/enums/menuEnum';
-import { CacheTypeEnum } from '/@/enums/cacheEnum';
+} from '@/enums/menuEnum';
+import { CacheTypeEnum } from '@/enums/cacheEnum';
 import {
   ContentEnum,
   PermissionModeEnum,
@@ -14,7 +14,7 @@ import {
   RouterTransitionEnum,
   SettingButtonPositionEnum,
   SessionTimeoutProcessingEnum,
-} from '/@/enums/appEnum';
+} from '@/enums/appEnum';
 import { primaryColor } from '../../build/config/themeConfig';
 
 // ! You need to clear the browser cache after the change

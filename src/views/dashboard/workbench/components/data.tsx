@@ -1,5 +1,5 @@
 import { VNodeTypes } from 'vue';
-import Icon from '/@/components/Icon';
+import Icon from '@/components/Icon';
 
 interface GroupItem {
   title: string;

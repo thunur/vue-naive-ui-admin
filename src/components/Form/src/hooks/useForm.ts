@@ -1,8 +1,8 @@
 import type { FormProps, FormActionType, UseFormReturnType } from '../types/form';
 
 import { ref, onUnmounted, unref, nextTick, watch } from 'vue';
-import { isProdMode } from '/@/utils/env';
-import { getDynamicProps } from '/@/utils';
+import { isProdMode } from '@/utils/env';
+import { getDynamicProps } from '@/utils';
 
 type Props = Partial<FormProps>;
 

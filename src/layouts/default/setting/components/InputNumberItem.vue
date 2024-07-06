@@ -25,9 +25,9 @@
   import { useDebounceFn } from '@vueuse/core';
   import { NInputNumber } from 'naive-ui';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { toWritableRef } from '/@/hooks/utilities/toWritableRef';
-  import { propTypes } from '/@/utils/propTypes';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { toWritableRef } from '@/hooks/utilities/toWritableRef';
+  import { propTypes } from '@/utils/propTypes';
   import { baseHandler } from '../handler';
   import { HandlerEnum } from '../enum';
   import Wrapper from './Wrapper.vue';

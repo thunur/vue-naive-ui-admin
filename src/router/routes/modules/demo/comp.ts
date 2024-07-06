@@ -1,6 +1,6 @@
-import type { AppRouteModule } from '/@/router/types';
+import type { AppRouteModule } from '@/router/types';
 
-import { LAYOUT, getParentLayout } from '/@/router/constant';
+import { LAYOUT, getParentLayout } from '@/router/constant';
 import { t } from '../../../../hooks/web/useI18n';
 
 const routes: AppRouteModule = {
@@ -26,7 +26,7 @@ const routes: AppRouteModule = {
         {
           path: 'basic-table',
           name: 'TableBasicDemo',
-          component: () => import('/@/views/demo/comp/table/basic.vue'),
+          component: () => import('@/views/demo/comp/table/basic.vue'),
           meta: {
             title: t('routes.demo.table.basic'),
           },
@@ -45,7 +45,7 @@ const routes: AppRouteModule = {
         {
           path: 'basic-form',
           name: 'formBasicDemo',
-          component: () => import('/@/views/demo/comp/form/basic.vue'),
+          component: () => import('@/views/demo/comp/form/basic.vue'),
           meta: {
             title: t('routes.demo.form.basic'),
           },
@@ -53,7 +53,7 @@ const routes: AppRouteModule = {
         {
           path: 'use-form',
           name: 'useFormDemo',
-          component: () => import('/@/views/demo/comp/form/useForm.vue'),
+          component: () => import('@/views/demo/comp/form/useForm.vue'),
           meta: {
             title: t('routes.demo.form.useForm'),
           },
@@ -63,7 +63,7 @@ const routes: AppRouteModule = {
     {
       path: 'modal',
       name: 'ModalDemo',
-      component: () => import('/@/views/demo/comp/modal/basic.vue'),
+      component: () => import('@/views/demo/comp/modal/basic.vue'),
       meta: {
         title: t('routes.demo.comp.modal'),
       },
@@ -71,7 +71,7 @@ const routes: AppRouteModule = {
     {
       path: 'loading',
       name: 'LoadingDemo',
-      component: () => import('/@/views/demo/comp/loading/basic.vue'),
+      component: () => import('@/views/demo/comp/loading/basic.vue'),
       meta: {
         title: t('routes.demo.comp.loading'),
       },

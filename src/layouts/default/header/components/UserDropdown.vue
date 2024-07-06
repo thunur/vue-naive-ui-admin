@@ -2,14 +2,14 @@
   import { defineComponent, computed } from 'vue';
   import { NDropdown, DropdownOption, NAvatar } from 'naive-ui';
 
-  import { useUserStore } from '/@/store/modules/user';
-  // import { useHeaderSetting } from '/@/hooks/setting/useHeaderSetting';
-  import { useI18n } from '/@/hooks/web/useI18n';
-  // import { useDesign } from '/@/hooks/web/useDesign';
-  import { useGo } from '/@/hooks/web/usePage';
+  import { useUserStore } from '@/store/modules/user';
+  // import { useHeaderSetting } from '@/hooks/setting/useHeaderSetting';
+  import { useI18n } from '@/hooks/web/useI18n';
+  // import { useDesign } from '@/hooks/web/useDesign';
+  import { useGo } from '@/hooks/web/usePage';
 
-  import headerImg from '/@/assets/images/header.jpg';
-  import Icon from '/@/components/Icon';
+  import headerImg from '@/assets/images/header.jpg';
+  import Icon from '@/components/Icon';
 
   enum MenuEvents {
     LOGOUT,

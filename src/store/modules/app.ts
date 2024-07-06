@@ -4,20 +4,20 @@ import type {
   MenuSetting,
   TransitionSetting,
   MultiTabsSetting,
-} from '/#/config';
+} from '#/config';
 
-import type { BeforeMiniState } from '/#/store';
+import type { BeforeMiniState } from '#/store';
 
-import { ThemeEnum } from '/@/enums/appEnum';
-import { APP_DARK_MODE_KEY_, PROJ_CFG_KEY } from '/@/enums/cacheEnum';
-import { Persistent } from '/@/utils/cache/persistent';
-import { darkMode } from '/@/settings/designSetting';
-import projectSetting from '/@/settings/projectSetting';
+import { ThemeEnum } from '@/enums/appEnum';
+import { APP_DARK_MODE_KEY_, PROJ_CFG_KEY } from '@/enums/cacheEnum';
+import { Persistent } from '@/utils/cache/persistent';
+import { darkMode } from '@/settings/designSetting';
+import projectSetting from '@/settings/projectSetting';
 import { defineStore } from 'pinia';
-import { store } from '/@/store';
+import { store } from '@/store';
 import { darkTheme } from 'naive-ui';
-import { deepMerge } from '/@/utils';
-import { resetRouter } from '/@/router';
+import { deepMerge } from '@/utils';
+import { resetRouter } from '@/router';
 
 import Tiny from 'tinycolor2';
 

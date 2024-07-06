@@ -14,7 +14,7 @@
   </div>
 </template>
 <script setup lang="ts">
-  import { useForm } from '/@/components/Form';
+  import { useForm } from '@/components/Form';
   import { step2Schemas } from './data';
 
   const emits = defineEmits(['next', 'prev']);

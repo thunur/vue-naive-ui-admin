@@ -1,5 +1,5 @@
 import type { ButtonProps, DropdownOption } from 'naive-ui';
-import { RoleEnum } from '/@/enums/roleEnum';
+import { RoleEnum } from '@/enums/roleEnum';
 
 export interface ActionItem extends ButtonProps {
   onClick?: Fn;

@@ -7,9 +7,9 @@
 <script setup lang="ts">
   import { and, not } from '@vueuse/core';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useHeaderSetting } from '/@/hooks/setting/useHeaderSetting';
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useHeaderSetting } from '@/hooks/setting/useHeaderSetting';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
   import useExtra from './useExtra';
 
   const { prefixCls } = useDesign('multiple-tabs-content');

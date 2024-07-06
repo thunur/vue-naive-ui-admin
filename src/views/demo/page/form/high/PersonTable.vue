@@ -15,7 +15,7 @@
 </template>
 <script setup lang="ts">
   import { h, ref } from 'vue';
-  import { BasicTable, TableAction, BasicColumn } from '/@/components/Table';
+  import { BasicTable, TableAction, BasicColumn } from '@/components/Table';
 
   const columns: BasicColumn[] = [
     {

@@ -19,12 +19,12 @@
 <script lang="ts">
   import { computed, defineComponent, unref } from 'vue';
 
-  import { GITHUB_URL } from '/@/settings/siteSetting';
-  import { openWindow } from '/@/utils';
+  import { GITHUB_URL } from '@/settings/siteSetting';
+  import { openWindow } from '@/utils';
 
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
   import { useRouter } from 'vue-router';
-  import { useDesign } from '/@/hooks/web/useDesign';
+  import { useDesign } from '@/hooks/web/useDesign';
 
   export default defineComponent({
     name: 'LayoutFooter',

@@ -4,7 +4,7 @@
 
 import { useEventBus, EventBusKey } from '@vueuse/core';
 import type { RouteLocationNormalized } from 'vue-router';
-import { getRawRoute } from '/@/utils';
+import { getRawRoute } from '@/utils';
 
 const beforeKey: EventBusKey<RouteLocationNormalized> = Symbol();
 const afterKey: EventBusKey<RouteLocationNormalized> = Symbol();

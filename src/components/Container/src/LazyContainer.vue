@@ -21,7 +21,7 @@
   import { defineComponent, reactive, onMounted, ref, toRef, toRefs } from 'vue';
   import { NSkeleton } from 'naive-ui';
   import { useTimeoutFn } from '@vueuse/core';
-  import { useIntersectionObserver } from '/@/hooks/event/useIntersectionObserver';
+  import { useIntersectionObserver } from '@/hooks/event/useIntersectionObserver';
 
   interface State {
     isInit: boolean;

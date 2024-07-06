@@ -1,6 +1,6 @@
 import { toRaw, ref } from 'vue';
 import type { RouteLocationNormalized } from 'vue-router';
-import { useMultipleTabStore } from '/@/store/modules/multipleTab';
+import { useMultipleTabStore } from '@/store/modules/multipleTab';
 import { useRouter } from 'vue-router';
 
 export function initAffixTabs(): string[] {

@@ -5,15 +5,15 @@
   import { useThemeVars, useLoadingBar } from 'naive-ui';
 
   import { createAppProviderContext } from './useAppContext';
-  import { prefixCls as _prefixCls } from '/@/settings/designSetting';
-  import { useAppStore } from '/@/store/modules/app';
+  import { prefixCls as _prefixCls } from '@/settings/designSetting';
+  import { useAppStore } from '@/store/modules/app';
 
-  import initDarkMode from '/@/hooks/web/useChaneTheme';
-  import initMessage from '/@/hooks/web/useMessage';
-  import { useTitle } from '/@/hooks/web/useTitle';
-  // import { useI18n } from '/@/hooks/web/useI18n';
-  import { getBreakpoint, sizeEnum } from '/@/enums/breakpointEnum';
-  import { MenuModeEnum, MenuTypeEnum } from '/@/enums/menuEnum';
+  import initDarkMode from '@/hooks/web/useChaneTheme';
+  import initMessage from '@/hooks/web/useMessage';
+  import { useTitle } from '@/hooks/web/useTitle';
+  // import { useI18n } from '@/hooks/web/useI18n';
+  import { getBreakpoint, sizeEnum } from '@/enums/breakpointEnum';
+  import { MenuModeEnum, MenuTypeEnum } from '@/enums/menuEnum';
 
   const props = defineProps({
     prefixCls: { type: String, default: _prefixCls },

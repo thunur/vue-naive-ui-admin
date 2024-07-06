@@ -1,10 +1,10 @@
 import { watch, readonly, ref } from 'vue';
 import { useLocalStorage } from '@vueuse/core';
-import { useAppStore } from '/@/store/modules/app';
+import { useAppStore } from '@/store/modules/app';
 import { useMenuSetting } from '../setting/useMenuSetting';
-import { ThemeEnum, ThemeStateEnum } from '/@/enums/appEnum';
-import { APP_THEME_STATE_KEY_ } from '/@/enums/cacheEnum';
-import { themeState } from '/@/settings/designSetting';
+import { ThemeEnum, ThemeStateEnum } from '@/enums/appEnum';
+import { APP_THEME_STATE_KEY_ } from '@/enums/cacheEnum';
+import { themeState } from '@/settings/designSetting';
 
 export const themeModeList = <const>['light', 'menuDark', 'dark'];
 type Theme = ThemeEnum | ThemeStateEnum;

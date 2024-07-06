@@ -44,8 +44,8 @@
 </template>
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useI18n } from '/@/hooks/web/useI18n';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useI18n } from '@/hooks/web/useI18n';
 
   export default defineComponent({
     name: 'ModalClose',

@@ -1,6 +1,6 @@
 import { ref, Ref, isRef } from 'vue';
 import { tryOnScopeDispose } from '@vueuse/core';
-import { isNumber, isString, isSymbol } from '/@/utils/is';
+import { isNumber, isString, isSymbol } from '@/utils/is';
 
 type Key = string | number | Symbol;
 type Id = Key | Ref<boolean>;

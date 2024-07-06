@@ -22,9 +22,9 @@
 
 <script setup lang="ts">
   import { computed, ref } from 'vue';
-  import Team from '/@/views/dashboard/workbench/components/Team.vue';
-  import { useUserStore } from '/@/store/modules/user';
-  import headerImg from '/@/assets/images/header.jpg';
+  import Team from '@/views/dashboard/workbench/components/Team.vue';
+  import { useUserStore } from '@/store/modules/user';
+  import headerImg from '@/assets/images/header.jpg';
   import { userMessage, tags } from './data';
 
   const userStore = useUserStore();

@@ -21,9 +21,9 @@
 
 <script lang="ts" setup>
   import { computed } from 'vue';
-  import { useAppStore } from '/@/store/modules/app';
-  import { useLocaleStore } from '/@/store/modules/locale';
-  import { getBreakpoint } from '/@/enums/breakpointEnum';
+  import { useAppStore } from '@/store/modules/app';
+  import { useLocaleStore } from '@/store/modules/locale';
+  import { getBreakpoint } from '@/enums/breakpointEnum';
   import hljs from 'highlight.js/lib/core';
   import javascript from 'highlight.js/lib/languages/javascript';
   import json from 'highlight.js/lib/languages/json';

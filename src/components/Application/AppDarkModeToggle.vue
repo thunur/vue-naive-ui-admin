@@ -1,11 +1,11 @@
 <script lang="tsx">
-  import useChangeTheme from '/@/hooks/web/useChaneTheme';
-  import { ThemeEnum } from '/@/enums/appEnum';
-  import { useDesign } from '/@/hooks/web/useDesign';
+  import useChangeTheme from '@/hooks/web/useChaneTheme';
+  import { ThemeEnum } from '@/enums/appEnum';
+  import { useDesign } from '@/hooks/web/useDesign';
   import { NTooltip } from 'naive-ui';
-  import { useI18n } from '/@/hooks/web/useI18n';
+  import { useI18n } from '@/hooks/web/useI18n';
   import { defineComponent } from 'vue';
-  import Icon from '/@/components/Icon';
+  import Icon from '@/components/Icon';
   export default defineComponent({
     name: 'AppDarkModeToggle',
     setup() {

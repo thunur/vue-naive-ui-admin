@@ -1,6 +1,6 @@
-import type { AppRouteModule } from '/@/router/types';
+import type { AppRouteModule } from '@/router/types';
 
-import { LAYOUT } from '/@/router/constant';
+import { LAYOUT } from '@/router/constant';
 import { t } from '../../../../hooks/web/useI18n';
 
 const routes: AppRouteModule = {
@@ -17,7 +17,7 @@ const routes: AppRouteModule = {
     {
       path: 'base-desc',
       name: 'baseDescPage',
-      component: () => import('/@/views/demo/page/desc/basic/basicDescPage.vue'),
+      component: () => import('@/views/demo/page/desc/basic/basicDescPage.vue'),
       meta: {
         title: t('routes.demo.page.descBasic'),
       },
@@ -25,7 +25,7 @@ const routes: AppRouteModule = {
     {
       path: 'high-desc',
       name: 'highDescPage',
-      component: () => import('/@/views/demo/page/desc/high/highDescPage.vue'),
+      component: () => import('@/views/demo/page/desc/high/highDescPage.vue'),
       meta: {
         title: t('routes.demo.page.descHigh'),
       },

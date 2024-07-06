@@ -5,18 +5,18 @@
 
   import { useSplitMenu } from './useLayoutMenu';
 
-  import type { Menu } from '/@/router/types';
-  import { MenuModeEnum, MenuSplitTypeEnum } from '/@/enums/menuEnum';
+  import type { Menu } from '@/router/types';
+  import { MenuModeEnum, MenuSplitTypeEnum } from '@/enums/menuEnum';
 
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
-  import { useAppInject } from '/@/hooks/web/useAppInject';
-  import { useI18n } from '/@/hooks/web/useI18n';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
+  import { useAppInject } from '@/hooks/web/useAppInject';
+  import { useI18n } from '@/hooks/web/useI18n';
 
-  import { getAllParentPath } from '/@/router/helper/menuHelper';
-  import { getCurrentParentPath } from '/@/router/menus';
-  import { REDIRECT_NAME } from '/@/router/constant';
-  import { propTypes } from '/@/utils/propTypes';
-  import { useGo } from '/@/hooks/web/usePage';
+  import { getAllParentPath } from '@/router/helper/menuHelper';
+  import { getCurrentParentPath } from '@/router/menus';
+  import { REDIRECT_NAME } from '@/router/constant';
+  import { propTypes } from '@/utils/propTypes';
+  import { useGo } from '@/hooks/web/usePage';
 
   import Icon from '../../../components/Icon/src/Icon.vue';
 

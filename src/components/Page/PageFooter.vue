@@ -18,11 +18,11 @@
   import { computed, useCssVars, unref } from 'vue';
   import { asyncComputed, promiseTimeout } from '@vueuse/core';
 
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
-  import { useTransitionSetting } from '/@/hooks/setting/useTransitionSetting';
-  import { getNaiveCssVars } from '/@/hooks/core/useNaiveInternal';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { usePageTransitionInject } from '/@/hooks/web/useAppInject';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
+  import { useTransitionSetting } from '@/hooks/setting/useTransitionSetting';
+  import { getNaiveCssVars } from '@/hooks/core/useNaiveInternal';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { usePageTransitionInject } from '@/hooks/web/useAppInject';
 
   const { prefixCls } = useDesign('page-footer');
   const { getIsDarkMode } = useRootSetting();

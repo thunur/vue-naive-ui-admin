@@ -30,8 +30,8 @@
 
 <script setup lang="ts">
   import { computed } from 'vue';
-  import { useUserStore } from '/@/store/modules/user';
-  import headerImg from '/@/assets/images/header.jpg';
+  import { useUserStore } from '@/store/modules/user';
+  import headerImg from '@/assets/images/header.jpg';
 
   const userStore = useUserStore();
   const userinfo = computed(() => userStore.getUserInfo);

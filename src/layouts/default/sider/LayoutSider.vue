@@ -23,14 +23,14 @@
 <script setup lang="ts">
   import { computed } from 'vue';
   import { clamp } from 'lodash-es';
-  import { MenuModeEnum, MenuSplitTypeEnum } from '/@/enums/menuEnum';
+  import { MenuModeEnum, MenuSplitTypeEnum } from '@/enums/menuEnum';
 
   import SiderWrapper from './SiderWrapper.vue';
   import LayoutMenu from '../menu/index.vue';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useAppInject } from '/@/hooks/web/useAppInject';
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useAppInject } from '@/hooks/web/useAppInject';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
 
   const { prefixCls } = useDesign('layout-sideBar');
   const { getIsMobile } = useAppInject();

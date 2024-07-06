@@ -26,14 +26,14 @@
   import { useElementSize, MaybeElementRef } from '@vueuse/core';
   import { isBoolean } from 'lodash-es';
   import { formatLength } from 'naive-ui/lib/_utils';
-  import { getNaiveCssVars } from '/@/hooks/core/useNaiveInternal';
+  import { getNaiveCssVars } from '@/hooks/core/useNaiveInternal';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useAppInject } from '/@/hooks/web/useAppInject';
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useAppInject } from '@/hooks/web/useAppInject';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
 
-  import { TriggerEnum } from '/@/enums/menuEnum';
+  import { TriggerEnum } from '@/enums/menuEnum';
   import Trigger from '../trigger/index.vue';
 
   const props = withDefaults(

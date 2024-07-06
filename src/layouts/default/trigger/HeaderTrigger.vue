@@ -8,7 +8,7 @@
   </span>
 </template>
 <script setup lang="ts">
-  import { propTypes } from '/@/utils/propTypes';
+  import { propTypes } from '@/utils/propTypes';
 
   defineProps({
     collapsed: propTypes.bool.def(false),

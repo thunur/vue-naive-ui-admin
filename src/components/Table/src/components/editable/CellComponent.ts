@@ -1,5 +1,5 @@
 import type { FunctionalComponent, defineComponent } from 'vue';
-import { componentMap } from '/@/components/Table/src/componentMap';
+import { componentMap } from '@/components/Table/src/componentMap';
 
 import { h } from 'vue';
 

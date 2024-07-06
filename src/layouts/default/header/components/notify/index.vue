@@ -65,7 +65,7 @@
   import { cloneDeep } from 'lodash-es';
   import { tabListData } from './data';
   import NoticeList from './NoticeList.vue';
-  import { useDesign } from '/@/hooks/web/useDesign';
+  import { useDesign } from '@/hooks/web/useDesign';
 
   const { prefixCls } = useDesign('header-notify');
   const listDataRef = ref(cloneDeep(tabListData));

@@ -6,10 +6,10 @@
 </template>
 <script setup lang="ts">
   import { computed, useCssVars } from 'vue';
-  import { getNaiveCssVars } from '/@/hooks/core/useNaiveInternal';
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { propTypes } from '/@/utils/propTypes';
+  import { getNaiveCssVars } from '@/hooks/core/useNaiveInternal';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { propTypes } from '@/utils/propTypes';
 
   defineProps({
     collapsed: propTypes.bool.def(false),

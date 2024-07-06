@@ -37,8 +37,8 @@
 </template>
 
 <script setup lang="ts">
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { propTypes } from '/@/utils/propTypes';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { propTypes } from '@/utils/propTypes';
 
   defineProps({
     prefixCls: propTypes.string,

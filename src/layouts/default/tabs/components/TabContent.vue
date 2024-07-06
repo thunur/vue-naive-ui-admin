@@ -7,11 +7,11 @@
 
   import { TabContentProps, MenuEventEnum } from '../types';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useI18n } from '/@/hooks/web/useI18n';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useI18n } from '@/hooks/web/useI18n';
   import { useTabDropdown } from '../useTabDropdown';
   import getCommonCls from './useExtra';
-  import Icon from '/@/components/Icon';
+  import Icon from '@/components/Icon';
 
   export default defineComponent({
     name: 'TabContent',

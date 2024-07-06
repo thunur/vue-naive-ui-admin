@@ -2,7 +2,7 @@ import type { ComputedRef, Ref } from 'vue';
 import type { FormProps, FormSchema, FormActionType } from '../types/form';
 import { unref } from 'vue';
 import { merge, isObject, isArray, update, get } from 'lodash-es';
-import { isFunction } from '/@/utils/is';
+import { isFunction } from '@/utils/is';
 
 declare type EmitType = (event: string, ...args: any[]) => void;
 

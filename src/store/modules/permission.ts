@@ -1,26 +1,26 @@
 import { useServiceStore } from './service';
-import type { AppRouteRecordRaw, Menu } from '/@/router/types';
+import type { AppRouteRecordRaw, Menu } from '@/router/types';
 
 import { defineStore } from 'pinia';
-import { store } from '/@/store';
-import { useI18n } from '/@/hooks/web/useI18n';
-import useWrapperMessage from '/@/hooks/web/useMessage';
+import { store } from '@/store';
+import { useI18n } from '@/hooks/web/useI18n';
+import useWrapperMessage from '@/hooks/web/useMessage';
 import { useUserStore } from './user';
 import { useAppStoreWithOut } from './app';
 import { toRaw } from 'vue';
-import { transformObjToRoute, flatMultiLevelRoutes } from '/@/router/helper/routeHelper';
-import { transformRouteToMenu } from '/@/router/helper/menuHelper';
+import { transformObjToRoute, flatMultiLevelRoutes } from '@/router/helper/routeHelper';
+import { transformRouteToMenu } from '@/router/helper/menuHelper';
 
-import projectSetting from '/@/settings/projectSetting';
+import projectSetting from '@/settings/projectSetting';
 
-import { PermissionModeEnum } from '/@/enums/appEnum';
+import { PermissionModeEnum } from '@/enums/appEnum';
 
-import { asyncRoutes } from '/@/router/routes';
-import { PAGE_NOT_FOUND_ROUTE } from '/@/router/routes/basic';
+import { asyncRoutes } from '@/router/routes';
+import { PAGE_NOT_FOUND_ROUTE } from '@/router/routes/basic';
 
-import { filter } from '/@/utils/helper/treeHelper';
+import { filter } from '@/utils/helper/treeHelper';
 
-import { PageEnum } from '/@/enums/pageEnum';
+import { PageEnum } from '@/enums/pageEnum';
 
 interface PermissionState {
   // Permission code list

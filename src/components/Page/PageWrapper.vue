@@ -41,10 +41,10 @@
   import { omit } from 'lodash-es';
   import PageFooter from './PageFooter.vue';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
-  import { getNaiveCssVars } from '/@/hooks/core/useNaiveInternal';
-  import { propTypes } from '/@/utils/propTypes';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
+  import { getNaiveCssVars } from '@/hooks/core/useNaiveInternal';
+  import { propTypes } from '@/utils/propTypes';
 
   const props = defineProps({
     title: propTypes.string,

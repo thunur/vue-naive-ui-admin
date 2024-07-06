@@ -14,9 +14,9 @@
 </script>
 
 <script setup lang="ts">
-  import { toWritableRef } from '/@/hooks/utilities/toWritableRef';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useI18n } from '/@/hooks/web/useI18n';
+  import { toWritableRef } from '@/hooks/utilities/toWritableRef';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useI18n } from '@/hooks/web/useI18n';
   import Wrapper from './Wrapper.vue';
 
   import { baseHandler } from '../handler';

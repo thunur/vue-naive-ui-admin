@@ -16,8 +16,8 @@
 </script>
 
 <script setup lang="ts">
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { toWritableRef } from '/@/hooks/utilities/toWritableRef';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { toWritableRef } from '@/hooks/utilities/toWritableRef';
   import { useDebounceFn } from '@vueuse/core';
 
   import Wrapper from './Wrapper.vue';

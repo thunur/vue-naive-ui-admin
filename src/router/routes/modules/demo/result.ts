@@ -1,6 +1,6 @@
-import type { AppRouteModule } from '/@/router/types';
+import type { AppRouteModule } from '@/router/types';
 
-import { LAYOUT } from '/@/router/constant';
+import { LAYOUT } from '@/router/constant';
 import { t } from '../../../../hooks/web/useI18n';
 
 const routes: AppRouteModule = {
@@ -17,7 +17,7 @@ const routes: AppRouteModule = {
     {
       path: 'success-result',
       name: 'successResultPage',
-      component: () => import('/@/views/demo/page/result/successResultPage.vue'),
+      component: () => import('@/views/demo/page/result/successResultPage.vue'),
       meta: {
         title: t('routes.demo.page.resultSuccess'),
       },
@@ -25,7 +25,7 @@ const routes: AppRouteModule = {
     {
       path: 'fail-result',
       name: 'failResultPage',
-      component: () => import('/@/views/demo/page/result/failResultPage.vue'),
+      component: () => import('@/views/demo/page/result/failResultPage.vue'),
       meta: {
         title: t('routes.demo.page.resultFail'),
       },

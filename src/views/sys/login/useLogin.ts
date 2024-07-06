@@ -3,7 +3,7 @@ import type { FormItemRuleValidator } from 'naive-ui/lib/form/src/interface';
 
 import { ref, computed, unref, Ref } from 'vue';
 import { createEventHook } from '@vueuse/core';
-import { useI18n } from '/@/hooks/web/useI18n';
+import { useI18n } from '@/hooks/web/useI18n';
 
 export enum LoginStateEnum {
   LOGIN,

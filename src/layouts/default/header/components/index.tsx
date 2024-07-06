@@ -1,5 +1,5 @@
 import { NSkeleton } from 'naive-ui';
-import { createAsyncComponent } from '/@/utils/factory/createAsyncComponent';
+import { createAsyncComponent } from '@/utils/factory/createAsyncComponent';
 
 export { default as FullScreen } from './FullScreen.vue';
 

@@ -58,21 +58,21 @@
 <script lang="ts">
   import { defineComponent, unref, computed } from 'vue';
 
-  import { propTypes } from '/@/utils/propTypes';
+  import { propTypes } from '@/utils/propTypes';
   import { LayoutBreadcrumb, FullScreen, Notify, UserDropDown } from './components';
   import Trigger from '../trigger/index.vue';
   import LayoutMenu from '../menu/index.vue';
 
-  import { useHeaderSetting } from '/@/hooks/setting/useHeaderSetting';
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useAppInject } from '/@/hooks/web/useAppInject';
-  import { useBreakpoint } from '/@/hooks/event/useBreakpoint';
+  import { useHeaderSetting } from '@/hooks/setting/useHeaderSetting';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useAppInject } from '@/hooks/web/useAppInject';
+  import { useBreakpoint } from '@/hooks/event/useBreakpoint';
 
-  import { createAsyncComponent } from '/@/utils/factory/createAsyncComponent';
-  import { useLocale } from '/@/locales/useLocale';
+  import { createAsyncComponent } from '@/utils/factory/createAsyncComponent';
+  import { useLocale } from '@/locales/useLocale';
 
-  import { MenuModeEnum, MenuSplitTypeEnum, TriggerEnum } from '/@/enums/menuEnum';
+  import { MenuModeEnum, MenuSplitTypeEnum, TriggerEnum } from '@/enums/menuEnum';
   import MTabs from '../tabs/index.vue';
 
   export default defineComponent({
@@ -84,7 +84,7 @@
       FullScreen,
       Notify,
       UserDropDown,
-      SettingDrawer: createAsyncComponent(() => import('/@/layouts/default/setting/index.vue'), {
+      SettingDrawer: createAsyncComponent(() => import('@/layouts/default/setting/index.vue'), {
         loading: true,
         size: 16,
       }),

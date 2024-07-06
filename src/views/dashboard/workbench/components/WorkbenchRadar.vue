@@ -7,8 +7,8 @@
 <script lang="ts" setup>
   import { ref } from 'vue';
   import { MaybeElementRef } from '@vueuse/core';
-  import { propTypes } from '/@/utils/propTypes';
-  import { useECharts } from '/@/hooks/web/useECharts';
+  import { propTypes } from '@/utils/propTypes';
+  import { useECharts } from '@/hooks/web/useECharts';
 
   defineProps({
     width: propTypes.string.def('100%'),

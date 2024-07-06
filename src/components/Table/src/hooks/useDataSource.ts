@@ -1,7 +1,7 @@
 import { ref, ComputedRef, unref, computed, onMounted, watchEffect, watch } from 'vue';
 import type { BasicTableProps } from '../types/table';
 import type { PaginationProps } from '../types/pagination';
-import { isBoolean } from '/@/utils/is';
+import { isBoolean } from '@/utils/is';
 import { APISETTING } from '../const';
 
 export function useDataSource(

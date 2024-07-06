@@ -13,8 +13,8 @@
 <script setup lang="ts">
   import { useDebounceFn } from '@vueuse/core';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { toWritableRef } from '/@/hooks/utilities/toWritableRef';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { toWritableRef } from '@/hooks/utilities/toWritableRef';
   import Wrapper from './Wrapper.vue';
 
   import { baseHandler } from '../handler';

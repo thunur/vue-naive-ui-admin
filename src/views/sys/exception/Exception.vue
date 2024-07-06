@@ -4,14 +4,14 @@
   import { NResult, NButton } from 'naive-ui';
   import { defineComponent, ref, computed, unref } from 'vue';
 
-  import { ExceptionEnum } from '/@/enums/exceptionEnum';
+  import { ExceptionEnum } from '@/enums/exceptionEnum';
 
   import { useRoute } from 'vue-router';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useI18n } from '/@/hooks/web/useI18n';
-  import { useGo, useRedo } from '/@/hooks/web/usePage';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useI18n } from '@/hooks/web/useI18n';
+  import { useGo, useRedo } from '@/hooks/web/usePage';
 
-  import { PageEnum } from '/@/enums/pageEnum';
+  import { PageEnum } from '@/enums/pageEnum';
 
   interface MapValue {
     title: string;

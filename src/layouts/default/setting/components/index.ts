@@ -1,4 +1,4 @@
-import { createAsyncComponent } from '/@/utils/factory/createAsyncComponent';
+import { createAsyncComponent } from '@/utils/factory/createAsyncComponent';
 
 export const LayoutModePicker = createAsyncComponent(() => import('./LayoutModePicker.vue'));
 export const ThemeModePicker = createAsyncComponent(() => import('./ThemeModePicker.vue'));

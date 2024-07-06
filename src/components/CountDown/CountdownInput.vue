@@ -24,8 +24,8 @@
   import { PropType } from 'vue';
   import { InputProps } from 'naive-ui';
   import CountButton from './CountButton.vue';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useRuleFormItem } from '/@/hooks/component/useFormItem';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useRuleFormItem } from '@/hooks/component/useFormItem';
 
   const props = defineProps({
     value: String,

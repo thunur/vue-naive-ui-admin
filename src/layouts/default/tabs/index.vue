@@ -46,20 +46,20 @@
   import { MaybeElementRef, unrefElement, useEventListener } from '@vueuse/core';
   import Smart from './components/Smart.vue';
   import Button from './components/Button.vue';
-  import { useMultipleTabStore } from '/@/store/modules/multipleTab';
-  import { listenerRouteChange } from '/@/logics/mitt/routeChange';
-  import { useMultipleTabSetting } from '/@/hooks/setting/useMultipleTabSetting';
-  import { REDIRECT_NAME } from '/@/router/constant';
+  import { useMultipleTabStore } from '@/store/modules/multipleTab';
+  import { listenerRouteChange } from '@/logics/mitt/routeChange';
+  import { useMultipleTabSetting } from '@/hooks/setting/useMultipleTabSetting';
+  import { REDIRECT_NAME } from '@/router/constant';
   import { RouteLocationNormalized, RouteMeta, useRouter } from 'vue-router';
   // import { initAffixTabs, useTabsDrag } from './useMultipleTabs';
-  import { useGo } from '/@/hooks/web/usePage';
+  import { useGo } from '@/hooks/web/usePage';
   import TabContent from './components/TabContent.vue';
   import TabRedo from './components/TabRedo.vue';
   import FoldButton from './components/FoldButton.vue';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { createLocalStorage } from '/@/utils/cache';
-  import { MULTIPLE_TABS_KEY } from '/@/enums/cacheEnum';
-  import { getNaiveCssVarsRef } from '/@/hooks/core/useNaiveInternal';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { createLocalStorage } from '@/utils/cache';
+  import { MULTIPLE_TABS_KEY } from '@/enums/cacheEnum';
+  import { getNaiveCssVarsRef } from '@/hooks/core/useNaiveInternal';
   import Draggable from 'vuedraggable/src/vuedraggable';
 
   export default defineComponent({

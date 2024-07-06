@@ -14,10 +14,10 @@
   import type { CSSProperties } from 'vue';
   import { defineComponent, ref, unref, computed } from 'vue';
 
-  import { propTypes } from '/@/utils/propTypes';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useLayoutContentResize } from '/@/logics/mitt/layoutContentResize';
-  import { useContentSizeInject } from '/@/hooks/web/useAppInject';
+  import { propTypes } from '@/utils/propTypes';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useLayoutContentResize } from '@/logics/mitt/layoutContentResize';
+  import { useContentSizeInject } from '@/hooks/web/useAppInject';
 
   export default defineComponent({
     name: 'IFrame',

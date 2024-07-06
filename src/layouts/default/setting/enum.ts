@@ -1,4 +1,4 @@
-import { ContentEnum, RouterTransitionEnum, ThemeStateEnum } from '/@/enums/appEnum';
+import { ContentEnum, RouterTransitionEnum, ThemeStateEnum } from '@/enums/appEnum';
 import {
   MenuModeEnum,
   MenuTypeEnum,
@@ -6,9 +6,9 @@ import {
   TriggerEnum,
   MixSidebarTriggerEnum,
   TabsStyleEnum,
-} from '/@/enums/menuEnum';
+} from '@/enums/menuEnum';
 
-import { t } from '/@/hooks/web/useI18n';
+import { t } from '@/hooks/web/useI18n';
 
 export enum HandlerEnum {
   CHANGE_LAYOUT,

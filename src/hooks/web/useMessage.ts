@@ -2,7 +2,7 @@ import { getCurrentInstance } from 'vue';
 import { useMessage, useDialog, useNotification } from 'naive-ui';
 import { omit } from 'lodash-es';
 import { useI18n } from './useI18n';
-// import { noop } from '/@/utils';
+// import { noop } from '@/utils';
 
 import type {
   MessageApi,

@@ -1,6 +1,6 @@
-import { BaseService, Service } from '/@/service/common';
-import { LoginParams } from '/#/model/account/userModel';
-import { ErrorMessageMode } from '/#/axios';
+import { BaseService, Service } from '@/service/common';
+import { LoginParams } from '#/model/account/userModel';
+import { ErrorMessageMode } from '#/axios';
 
 @Service('sys/account')
 class account extends BaseService {

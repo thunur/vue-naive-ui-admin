@@ -16,14 +16,14 @@
   import { defineComponent } from 'vue';
   import { baseHandler } from '../handler';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
-  import { useI18n } from '/@/hooks/web/useI18n';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
+  import { useI18n } from '@/hooks/web/useI18n';
 
   import Picker from './Picker.vue';
 
   import { HandlerEnum, menuTypeList } from '../enum';
-  import { MenuTypeEnum } from '/@/enums/menuEnum';
+  import { MenuTypeEnum } from '@/enums/menuEnum';
 
   export default defineComponent({
     name: 'ThemeModePicker',
@@ -33,7 +33,7 @@
       const { getMenuType, getIsTopMenu } = useMenuSetting();
       const { t } = useI18n();
 
-      const handleChange = ({ mode, type }: typeof menuTypeList[0]) => {
+      const handleChange = ({ mode, type }: (typeof menuTypeList)[0]) => {
         baseHandler(HandlerEnum.CHANGE_LAYOUT, {
           mode,
           type,

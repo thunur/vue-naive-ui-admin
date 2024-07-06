@@ -24,7 +24,7 @@
 <script setup lang="ts">
   import { ref, computed } from 'vue';
   import { MenuOption } from 'naive-ui';
-  import { useAppInject } from '/@/hooks/web/useAppInject';
+  import { useAppInject } from '@/hooks/web/useAppInject';
   import BaseSetting from './components/BaseSetting.vue';
   import SecureSetting from './components/SecureSetting.vue';
   import AccountBind from './components/AccountBind.vue';

@@ -21,8 +21,8 @@
   import { Icon as Iconify } from '@iconify/vue';
   import type { Depth } from 'naive-ui/lib/icon/src/Icon';
   import { defineComponent, computed } from 'vue';
-  import { propTypes } from '/@/utils/propTypes';
-  import { useDesign } from '/@/hooks/web/useDesign';
+  import { propTypes } from '@/utils/propTypes';
+  import { useDesign } from '@/hooks/web/useDesign';
 
   const SVG_END_WITH_FLAG = '|svg';
   export default defineComponent({

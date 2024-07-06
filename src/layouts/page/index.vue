@@ -22,9 +22,9 @@
 <script lang="ts">
   import { defineComponent, ref } from 'vue';
 
-  import FrameLayout from '/@/layouts/iframe/index.vue';
+  import FrameLayout from '@/layouts/iframe/index.vue';
 
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
   import { useTransition } from './useTransition';
 
   import { createPageTransitionContext, PageTranstionState } from './useTransitonContext';

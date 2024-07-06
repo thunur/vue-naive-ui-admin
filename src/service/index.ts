@@ -1,6 +1,6 @@
 import { BaseService } from './common';
-import { baseName } from '/@/utils';
-import { useServiceStoreWithOut } from '/@/store/modules/service';
+import { baseName } from '@/utils';
+import { useServiceStoreWithOut } from '@/store/modules/service';
 
 function deepFiles(list: any[]) {
   const modules: any = {};

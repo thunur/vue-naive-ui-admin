@@ -30,7 +30,7 @@
 <script setup lang="ts">
   import { useMessage } from 'naive-ui';
   import { schemas } from './data';
-  import { useForm } from '/@/components/Form';
+  import { useForm } from '@/components/Form';
 
   const [register, { setProps }] = useForm({
     submitButtonText: '提交',

@@ -6,10 +6,10 @@
 <script setup lang="ts">
   import { computed, unref, watch } from 'vue';
   import { useTransition, TransitionPresets } from '@vueuse/core';
-  import { toWritableRef } from '/@/hooks/utilities/toWritableRef';
-  import { isNumber } from '/@/utils/is';
+  import { toWritableRef } from '@/hooks/utilities/toWritableRef';
+  import { isNumber } from '@/utils/is';
 
-  import { propTypes } from '/@/utils/propTypes';
+  import { propTypes } from '@/utils/propTypes';
 
   const props = defineProps({
     startVal: propTypes.number.def(0),

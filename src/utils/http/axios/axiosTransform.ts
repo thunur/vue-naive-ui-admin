@@ -2,7 +2,7 @@
  * Data processing class, can be configured according to the project
  */
 import type { AxiosRequestConfig, AxiosResponse } from 'axios';
-import type { RequestOptions, Result } from '/#/axios';
+import type { RequestOptions, Result } from '#/axios';
 
 export interface CreateAxiosOptions extends AxiosRequestConfig {
   authenticationScheme?: string;

@@ -5,7 +5,7 @@
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue';
-  import { useECharts } from '/@/hooks/web/useECharts';
+  import { useECharts } from '@/hooks/web/useECharts';
   import { basicProps } from './chartProps';
   import { useLoading } from './useLoading';
 

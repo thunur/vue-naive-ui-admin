@@ -1,7 +1,7 @@
 import type { CSSProperties, PropType } from 'vue';
 import { FormSchema } from './types/form';
 import type { FormItemProps, ButtonProps, GridProps, GridItemProps } from 'naive-ui';
-import { propTypes } from '/@/utils/propTypes';
+import { propTypes } from '@/utils/propTypes';
 
 export const basicProps = {
   disabled: propTypes.bool.def(false),

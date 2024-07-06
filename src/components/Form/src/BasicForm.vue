@@ -173,10 +173,10 @@
   import { useFormValues } from './hooks/useFormValues';
   import { basicProps } from './props';
   import type { FormSchema, FormProps, FormActionType } from './types/form';
-  import { isBoolean, isNull, isArray, isString, isFunction } from '/@/utils/is';
-  import { deepMerge } from '/@/utils';
-  import { useI18n } from '/@/hooks/web/useI18n';
-  import { useBreakpoint } from '/@/hooks/event/useBreakpoint';
+  import { isBoolean, isNull, isArray, isString, isFunction } from '@/utils/is';
+  import { deepMerge } from '@/utils';
+  import { useI18n } from '@/hooks/web/useI18n';
+  import { useBreakpoint } from '@/hooks/event/useBreakpoint';
   import { ComponentType } from './types';
   import { componentMap } from './componentMap';
   export default defineComponent({

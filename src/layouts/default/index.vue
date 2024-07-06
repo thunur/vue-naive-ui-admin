@@ -10,10 +10,10 @@
 
 <script lang="ts">
   import { defineComponent, computed } from 'vue';
-  import { MenuTypeEnum, LayoutClsEnum } from '/@/enums/menuEnum';
+  import { MenuTypeEnum, LayoutClsEnum } from '@/enums/menuEnum';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
 
   import LayoutHeader from './header/index.vue';
   import LayoutSider from './sider/index.vue';

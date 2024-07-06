@@ -11,7 +11,7 @@
   import { defineComponent } from 'vue';
   import SettingDrawer from './SettingDrawer.vue';
 
-  import { useDrawer, useDrawerEnum } from '/@/hooks/component/useDrawer';
+  import { useDrawer, useDrawerEnum } from '@/hooks/component/useDrawer';
 
   export default defineComponent({
     name: 'SettingButton',

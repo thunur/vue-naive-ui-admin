@@ -22,7 +22,7 @@
   import { omit } from 'lodash-es';
   import { CardProps } from 'naive-ui';
   import NFadeInExpandTransition from 'naive-ui/lib/_internal/fade-in-expand-transition';
-  import { useDesign } from '/@/hooks/web/useDesign';
+  import { useDesign } from '@/hooks/web/useDesign';
 
   const slots = useSlots();
   const { prefixCls } = useDesign('collapse-transition');

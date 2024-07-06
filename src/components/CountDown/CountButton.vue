@@ -6,8 +6,8 @@
 <script lang="ts">
   import { defineComponent, ref, watchEffect, computed, unref } from 'vue';
   import { useCountdown } from './useCountdown';
-  import { isFunction } from '/@/utils/is';
-  import { useI18n } from '/@/hooks/web/useI18n';
+  import { isFunction } from '@/utils/is';
+  import { useI18n } from '@/hooks/web/useI18n';
 
   const props = {
     value: { type: [Object, Number, String, Array] },

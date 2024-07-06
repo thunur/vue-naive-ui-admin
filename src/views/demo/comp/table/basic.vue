@@ -46,9 +46,9 @@
 <script lang="ts" setup>
   import { h, reactive, ref } from 'vue';
   import { useMessage } from 'naive-ui';
-  import { BasicTable, TableAction, BasicColumn } from '/@/components/Table';
-  import { BasicForm, useForm } from '/@/components/Form/index';
-  import { useServiceStore } from '/@/store/modules/service';
+  import { BasicTable, TableAction, BasicColumn } from '@/components/Table';
+  import { BasicForm, useForm } from '@/components/Form/index';
+  import { useServiceStore } from '@/store/modules/service';
   import { columns } from './columns';
   import { schemas, modelSchemas } from './data';
 

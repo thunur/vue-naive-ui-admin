@@ -13,8 +13,8 @@
 <script setup lang="ts">
   import { computed, CSSProperties } from 'vue';
   import { omit } from 'lodash-es';
-  import { getNaiveCssVarsRef } from '/@/hooks/core/useNaiveInternal';
-  import { useDesign } from '/@/hooks/web/useDesign';
+  import { getNaiveCssVarsRef } from '@/hooks/core/useNaiveInternal';
+  import { useDesign } from '@/hooks/web/useDesign';
 
   const { prefixCls } = useDesign('card-grid');
   const borderColorRef = getNaiveCssVarsRef('Card', 'borderColor')!;

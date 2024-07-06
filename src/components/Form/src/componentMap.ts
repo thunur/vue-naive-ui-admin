@@ -25,7 +25,7 @@ import {
   NDivider,
 } from 'naive-ui';
 
-// import CountdownInput from '/@/components/CountDown/CountdownInput.vue';
+// import CountdownInput from '@/components/CountDown/CountdownInput.vue';
 
 const componentMap = new Map<ComponentType, Component>();
 

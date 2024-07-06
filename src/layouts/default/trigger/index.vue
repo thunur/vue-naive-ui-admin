@@ -10,8 +10,8 @@
 
 <script setup lang="ts">
   import type { Component } from 'vue';
-  import { TriggerEnum } from '/@/enums/menuEnum';
-  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
+  import { TriggerEnum } from '@/enums/menuEnum';
+  import { useMenuSetting } from '@/hooks/setting/useMenuSetting';
   import { isFunction } from 'lodash-es';
 
   import BarTrigger from './BarTrigger.vue';

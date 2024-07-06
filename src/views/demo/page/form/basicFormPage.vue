@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
   import { useMessage } from 'naive-ui';
-  import { FormSchema } from '/@/components/Form';
+  import { FormSchema } from '@/components/Form';
 
   const schemas: FormSchema[] = [
     {

@@ -31,7 +31,7 @@
 <script lang="ts" setup>
   import { reactive, ref, computed, unref } from 'vue';
 
-  import { useI18n } from '/@/hooks/web/useI18n';
+  import { useI18n } from '@/hooks/web/useI18n';
   import { useLoginState, useFormRules, useFormValid, LoginStateEnum } from './useLogin';
 
   const { t } = useI18n();

@@ -1,5 +1,5 @@
-import { FormSchema } from '/@/components/Form';
-import Icon from '/@/components/Icon';
+import { FormSchema } from '@/components/Form';
+import Icon from '@/components/Icon';
 
 export const schemas: FormSchema[] = [
   {

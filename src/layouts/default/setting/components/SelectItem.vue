@@ -20,9 +20,9 @@
 <script lang="ts" setup>
   import { PropType, computed, watch } from 'vue';
 
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useI18n } from '/@/hooks/web/useI18n';
-  import { toWritableRef } from '/@/hooks/utilities/toWritableRef';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useI18n } from '@/hooks/web/useI18n';
+  import { toWritableRef } from '@/hooks/utilities/toWritableRef';
   import Wrapper from './Wrapper.vue';
 
   import { baseHandler } from '../handler';

@@ -2,8 +2,8 @@ import { NModal } from 'naive-ui';
 import { defineComponent, toRefs, unref } from 'vue';
 import { basicProps } from '../props';
 import { useModalDragMove } from '../hooks/useModalDrag';
-import { useAttrs } from '/@/hooks/core/useAttrs';
-import { extendSlots } from '/@/utils/helper/tsxHelper';
+import { useAttrs } from '@/hooks/core/useAttrs';
+import { extendSlots } from '@/utils/helper/tsxHelper';
 
 export default defineComponent({
   name: 'Modal',
@@ -20,7 +20,7 @@ export default defineComponent({
 
     return () => {
       const propsData = { ...unref(attrs), ...props } as Recordable;
-			console.log(propsData);
+      console.log(propsData);
       return <NModal {...propsData}>{extendSlots(slots)}</NModal>;
     };
   },

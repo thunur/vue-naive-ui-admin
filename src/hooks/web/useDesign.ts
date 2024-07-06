@@ -1,4 +1,4 @@
-import { useAppProviderContext } from '/@/components/Application/useAppContext';
+import { useAppProviderContext } from '@/components/Application/useAppContext';
 
 export function useDesign(scope: string) {
   const values = useAppProviderContext();

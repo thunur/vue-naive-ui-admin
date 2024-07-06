@@ -35,7 +35,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import CountTo from '/@/components/CountTo/CountTo.vue';
+  import CountTo from '@/components/CountTo/CountTo.vue';
   import { growCardList } from './data';
   import { useLoading } from './useLoading';
 

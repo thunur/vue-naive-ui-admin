@@ -28,9 +28,9 @@
 <script lang="ts" setup>
   import LoginForm from './LoginForm.vue';
   import MobileForm from './MobileForm.vue';
-  import Footer from '/@/layouts/default/footer/index.vue';
-  import { useDesign } from '/@/hooks/web/useDesign';
-  import { useLocaleStore } from '/@/store/modules/locale';
+  import Footer from '@/layouts/default/footer/index.vue';
+  import { useDesign } from '@/hooks/web/useDesign';
+  import { useLocaleStore } from '@/store/modules/locale';
 
   defineProps({
     sessionTimeout: {
@@ -57,7 +57,7 @@
       z-index: -1;
       width: 100%;
       height: 100%;
-      background-image: url('/@/assets/bg.svg');
+      background-image: url('@/assets/bg.svg');
       background-size: cover;
       :root.dark & {
         filter: invert(0.92);

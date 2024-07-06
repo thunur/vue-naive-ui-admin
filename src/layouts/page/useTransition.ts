@@ -5,9 +5,9 @@ import type { Ref } from 'vue';
 import { useRootSetting } from '../../hooks/setting/useRootSetting';
 import { useTransitionSetting } from '../../hooks/setting/useTransitionSetting';
 import { useMultipleTabSetting } from '../../hooks/setting/useMultipleTabSetting';
-import { useMultipleTabStore } from '/@/store/modules/multipleTab';
+import { useMultipleTabStore } from '@/store/modules/multipleTab';
 
-import { RouterTransitionEnum } from '/@/enums/appEnum';
+import { RouterTransitionEnum } from '@/enums/appEnum';
 
 export function useTransition(nameRef: Ref<string | undefined>) {
   const { getBasicTransition, getEnableTransition } = useTransitionSetting();

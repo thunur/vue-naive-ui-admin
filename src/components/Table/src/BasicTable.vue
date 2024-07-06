@@ -87,10 +87,10 @@
   import { usePagination } from './hooks/usePagination';
   import { props } from './props';
   import { BasicTableProps } from './types/table';
-  import { getViewportOffset } from '/@/utils/domUtils';
-  import { useWindowSizeFn } from '/@/hooks/event/useWindowSizeFn';
+  import { getViewportOffset } from '@/utils/domUtils';
+  import { useWindowSizeFn } from '@/hooks/event/useWindowSizeFn';
 
-  import { isBoolean } from '/@/utils/is';
+  import { isBoolean } from '@/utils/is';
   import { dropMenuList } from './hooks/useTableDropdown';
   import { DropEventEnum } from './types/dropdown';
 

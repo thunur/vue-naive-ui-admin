@@ -10,9 +10,9 @@
 <script lang="ts">
   import { useRouter } from 'vue-router';
   import { defineComponent, ref, watchEffect } from 'vue';
-  import { useRootSetting } from '/@/hooks/setting/useRootSetting';
-  import { useI18n } from '/@/hooks/web/useI18n';
-  import { filter } from '/@/utils/helper/treeHelper';
+  import { useRootSetting } from '@/hooks/setting/useRootSetting';
+  import { useI18n } from '@/hooks/web/useI18n';
+  import { filter } from '@/utils/helper/treeHelper';
   import type { RouteLocationMatched } from 'vue-router';
 
   export default defineComponent({

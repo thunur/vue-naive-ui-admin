@@ -23,7 +23,7 @@
 </template>
 <script lang="ts">
   import { defineComponent, ref, watch } from 'vue';
-  import { useModalInner } from '/@/components/Modal';
+  import { useModalInner } from '@/components/Modal';
   export default defineComponent({
     setup() {
       const loading = ref(true);

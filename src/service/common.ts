@@ -1,6 +1,6 @@
-import { defHttp } from '/@/utils/http/axios';
+import { defHttp } from '@/utils/http/axios';
 import { AxiosRequestConfig } from 'axios';
-import { RequestOptions } from '/#/axios';
+import { RequestOptions } from '#/axios';
 import { Service } from './annotations';
 
 class BaseService {

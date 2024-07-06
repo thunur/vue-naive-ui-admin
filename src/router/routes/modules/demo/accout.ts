@@ -1,6 +1,6 @@
-import type { AppRouteModule } from '/@/router/types';
+import type { AppRouteModule } from '@/router/types';
 
-import { LAYOUT } from '/@/router/constant';
+import { LAYOUT } from '@/router/constant';
 import { t } from '../../../../hooks/web/useI18n';
 
 const routes: AppRouteModule = {
@@ -17,7 +17,7 @@ const routes: AppRouteModule = {
     {
       path: 'center',
       name: 'AccountCenterPage',
-      component: () => import('/@/views/demo/page/account/center/accountCenterPage.vue'),
+      component: () => import('@/views/demo/page/account/center/accountCenterPage.vue'),
       meta: {
         title: t('routes.demo.page.accountCenter'),
       },
@@ -25,7 +25,7 @@ const routes: AppRouteModule = {
     {
       path: 'setting',
       name: 'AccountSettingPage',
-      component: () => import('/@/views/demo/page/account/setting/accountSettingPage.vue'),
+      component: () => import('@/views/demo/page/account/setting/accountSettingPage.vue'),
       meta: {
         title: t('routes.demo.page.accountSetting'),
       },

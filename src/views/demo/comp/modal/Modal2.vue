@@ -11,7 +11,7 @@
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import { useModalInner } from '/@/components/Modal';
+  import { useModalInner } from '@/components/Modal';
   export default defineComponent({
     setup() {
       const [register, { closeModal, setModalProps }] = useModalInner();
