@@ -37,7 +37,7 @@
     "build/**/*.ts",
     "build/**/*.d.ts",
     "mock/**/*.ts",
-    "vite.config.ts"
+		"vite.config.mts"
   ],
   "exclude": ["node_modules", "dist", "**/*.js", "src/views/demo/main-out/*"]
 }

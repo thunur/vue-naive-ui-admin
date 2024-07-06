@@ -1,6 +1,6 @@
 <template>
   <n-card>
-    <div class="*hb-layout flex-col">
+    <div class="flex justify-between items-center flex-col">
       <n-avatar :src="userinfo.avatar || headerImg" round :size="108" class="mb-6" />
       <div class="font-semibold text-lg font-segoe">{{ userinfo.realName }}</div>
       <div>日月之行，若出其中</div>

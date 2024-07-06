@@ -1,5 +1,8 @@
 <template>
-  <span class="app-layout-header-anction-icon" @click="onClick">
+  <span
+    class="cursor-pointer h-full px-2.5 flex justify-between items-center hover:bg-$hover-color"
+    @click="onClick"
+  >
     <Icon icon="ant-design:menu-unfold-outlined" v-if="collapsed" viewBox="64 64 896 896" />
     <Icon icon="ant-design:menu-fold-outlined" v-else viewBox="64 64 896 896" />
   </span>

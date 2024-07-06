@@ -4,9 +4,9 @@ import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import { configHtmlPlugin } from './html';
 import { configMockPlugin } from './mock';
-import { configWindiCSSPlugin } from './windicss';
 import { configComponentsPlugin } from './components';
 import { configSvgIconsPlugin } from './svgSprite';
+import UnoCSS from 'unocss/vite';
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const { VITE_USE_MOCK } = viteEnv;
@@ -17,8 +17,7 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     }),
     vueJsx() as PluginOption,
   ];
-
-  vitePlugins.push(configWindiCSSPlugin());
+  vitePlugins.push(UnoCSS());
   vitePlugins.push(configComponentsPlugin());
 
   vitePlugins.push(configSvgIconsPlugin(isBuild));

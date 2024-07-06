@@ -1,7 +1,7 @@
 <template>
   <div
     ref="wrapperEl"
-    class="*vs-layout *n-ease-in-out cursor-pointer"
+    class="flex items-center duration-300 ease-in-out cursor-pointer"
     :style="getWrapperStyle"
     @click="goHome"
   >
@@ -9,7 +9,7 @@
     <div
       ref="titleEl"
       v-if="showTitle"
-      class="text-$app-primary-color dark:text-white font-segoe transition-colors *n-ease-in-out ml-3 font-semibold"
+      class="text-$app-primary-color dark:text-white font-segoe transition-colors duration-300 ease-in-out ml-3 font-semibold"
       :class="[`${prefixCls}__title`]"
       :style="getTitleStyle"
     >

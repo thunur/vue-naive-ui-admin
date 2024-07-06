@@ -36,7 +36,7 @@ function deepFiles(list: any[]) {
 
 function setupService() {
   // 扫描文件
-  const files = import.meta.globEager('/src/api/**/*.ts');
+  const files = import.meta.glob('/src/api/**/*.ts', { eager: true });
   const array: any = [];
   for (const i in files) {
     const value = files[i].default;

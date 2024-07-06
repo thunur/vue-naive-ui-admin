@@ -10,13 +10,7 @@ export function useModalDragMove(context: UseModalDragMoveContext) {
   const getStyle = function (dom: Element, attr: string) {
     return getComputedStyle(dom)[attr];
   };
-  const params = {
-    left: 0,
-    top: 0,
-    currentX: 0,
-    currentY: 0,
-    flag: false,
-  };
+
   const drag = (wrap: any) => {
     if (!wrap) return;
     wrap.setAttribute('data-drag', unref(context.draggable));
@@ -24,16 +18,9 @@ export function useModalDragMove(context: UseModalDragMoveContext) {
     const target = wrap.querySelector('.n-modal') as HTMLDivElement;
 
     if (!bar || !target || !unref(context.draggable)) return;
-    const title = bar.querySelector('.aso-basic-title') as HTMLDivElement;
+    const title = bar.querySelector('.n-card-header__main') as HTMLDivElement;
     bar.style.cursor = 'move';
     title.style.cursor = 'move';
-
-    if (getStyle(target, 'left') !== 'auto') {
-      params.left = getStyle(target, 'left');
-    }
-    if (getStyle(target, 'top') !== 'auto') {
-      params.top = getStyle(target, 'top');
-    }
 
     // o是移动对象
     bar.onmousedown = function (e) {

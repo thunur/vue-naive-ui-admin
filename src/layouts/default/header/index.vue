@@ -5,9 +5,9 @@
     :inverted="getInverted"
   >
     <div :class="`${prefixCls}_header`" v-if="getShowHeader">
-      <div class="*hb-layout h-full text-1.2em">
-        <div class="*hb-layout h-full">
-          <div v-if="getShowLogo" class="*vs-layout h-full">
+      <div class="flex justify-between items-center h-full text-1.2em">
+        <div class="flex justify-between items-center h-full">
+          <div v-if="getShowLogo" class="flex items-center h-full">
             <AppLogo
               :collapsed="getCollapsed"
               collapsed-show-title
@@ -23,7 +23,7 @@
         </div>
         <div
           v-if="getShowTopMenu && !getIsMobile"
-          class="*hb-layout flex-1 min-w-0 px-2 relative h-full"
+          class="flex justify-between items-center flex-1 min-w-0 px-2 relative h-full"
           ref="scrollEl"
         >
           <ScrollContainer x-scrollable :inverted="getInverted" class="absolute left-0 top-2px">
@@ -34,15 +34,19 @@
             />
           </ScrollContainer>
         </div>
-        <div class="*vs-layout h-full">
-          <AppSearch class="app-layout-header-anction-icon" />
+        <div class="flex items-center h-full">
+          <AppSearch
+            class="cursor-pointer h-full px-2.5 flex justify-between items-center hover:bg-$hover-color"
+          />
           <Notify v-if="!getIs2xs" />
           <AppLocalePicker
             v-if="getShowLocalePicker"
-            trigger-cls="app-layout-header-anction-icon"
+            trigger-cls="cursor-pointer h-full px-2.5 flex justify-between items-center hover:bg-$hover-color"
           />
           <FullScreen v-if="!getIs2xs" />
-          <AppDarkModeToggle class="app-layout-header-anction-icon" />
+          <AppDarkModeToggle
+            class="cursor-pointer h-full px-2.5 flex justify-between items-center hover:bg-$hover-color"
+          />
           <UserDropDown v-if="!getIs2xs" />
           <SettingDrawer />
         </div>

@@ -1,5 +1,8 @@
 <template>
-  <div class="app-layout-header-anction-icon px-3" @click="setDrawerState(true)">
+  <div
+    class="cursor-pointer h-full px-2.5 flex justify-between items-center hover:bg-$hover-color px-3"
+    @click="setDrawerState(true)"
+  >
     <Icon icon="ion-settings-outline" />
     <SettingDrawer />
   </div>

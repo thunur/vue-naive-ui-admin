@@ -2,7 +2,12 @@
   <span :class="[`${prefixCls}__extra-redo`, wrapperClass]" @click="handleRedo">
     <Icon
       icon="codicon-refresh"
-      :class="[iconClass, loading ? '*spin animate-duration-1200' : '']"
+      :class="[
+        iconClass,
+        loading
+          ? 'animate-spin animate-ease-[cubic-bezier(0.37,0.35,0.35,0.97)] animate-duration-1200'
+          : '',
+      ]"
     />
   </span>
 </template>

@@ -51,7 +51,7 @@
     const suffix = value as string;
     return h(
       'div',
-      { class: `min-w-120px d-flex *hb-layout` },
+      { class: `min-w-120px d-flex flex justify-between items-center` },
       {
         default: () => [
           h('span', undefined, {

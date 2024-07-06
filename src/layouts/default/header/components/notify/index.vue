@@ -2,7 +2,9 @@
   <div :class="prefixCls" class="h-full">
     <n-popover trigger="click" class="!p-0" placement="bottom">
       <template #trigger>
-        <span class="app-layout-header-anction-icon mr-1 relative">
+        <span
+          class="cursor-pointer h-full px-2.5 flex justify-between items-center hover:bg-$hover-color mr-1 relative"
+        >
           <Icon icon="ant-design:bell-outlined" class="text-$n-text-color" />
           <n-badge
             :value="count"

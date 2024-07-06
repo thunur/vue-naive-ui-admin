@@ -1,8 +1,4 @@
-// Register windi
-import 'virtual:windi-base.css';
-import 'virtual:windi-components.css';
-import 'virtual:windi-utilities.css';
-import 'virtual:windi-devtools';
+import 'virtual:uno.css';
 import '/@/design/index.less';
 // Register icon sprite
 import 'virtual:svg-icons-register';

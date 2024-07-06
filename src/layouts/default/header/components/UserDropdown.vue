@@ -81,7 +81,7 @@
             onSelect={handleMenuClick}
             width="trigger"
           >
-            <div class="app-layout-header-anction-icon">
+            <div class="cursor-pointer h-full px-2.5 flex justify-between items-center hover:bg-$hover-color">
               <NAvatar class="mr-3" src={getUserInfo.value.avatar} round size={24} />
               <span class="text-14px text-$text-color">{getUserInfo.value.realName}</span>
             </div>

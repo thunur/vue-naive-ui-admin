@@ -9,7 +9,7 @@
           :class="[
             getIsMobile
               ? 'justify-center'
-              : 'w-200px border-r justify-center border-$app-border-color transition-all *n-ease-in-out',
+              : 'w-200px border-r justify-center border-$app-border-color transition-all duration-300 ease-in-out',
           ]"
         />
 

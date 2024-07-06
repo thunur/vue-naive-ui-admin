@@ -1,7 +1,10 @@
 <template>
   <NTooltip trigger="hover" placement="bottom" :delay="300">
     <template #trigger>
-      <span class="app-layout-header-anction-icon" @click="toggle">
+      <span
+        class="cursor-pointer h-full px-2.5 flex justify-between items-center hover:bg-$hover-color"
+        @click="toggle"
+      >
         <Icon
           icon="ant-design:fullscreen-exit-outlined"
           v-if="isFullscreen"

@@ -1,11 +1,18 @@
 <template>
-  <footer v-if="show || getShowLayoutFooter" :class="prefixCls">
+  <footer
+    v-if="show || getShowLayoutFooter"
+    :class="prefixCls"
+    class="text-center my-6 space-x-2 flex flex justify-center"
+  >
     <Icon
       icon="ant-design:github-filled"
       :class="`${prefixCls}__icon`"
+      class="cursor-pointer text-18px text-gray-400 hover:text-gray-800 dark:(text-gray-600 hover:text-gray-400)"
       @click="openWindow(GITHUB_URL)"
     />
-    <div :class="`${prefixCls}__text`">Copyright &copy;2022 Aso.design</div>
+    <div :class="`${prefixCls}__text`" class="text-gray-400 dark:text-gray-600"
+      >Copyright &copy;2022 Aso.design</div
+    >
   </footer>
 </template>
 
@@ -45,13 +52,4 @@
 
 <style lang="less">
   @prefix-cls: ~'@{namespace}-layout-footer';
-  .@{prefix-cls} {
-    @apply text-center my-6 space-x-2 flex *hs-layout;
-    &__icon {
-      @apply cursor-pointer text-18px text-gray-400 hover:text-gray-800 dark:(text-gray-600 hover:text-gray-400);
-    }
-    &__text {
-      @apply text-gray-400 dark:text-gray-600;
-    }
-  }
 </style>
