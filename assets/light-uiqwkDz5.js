@@ -1,0 +1,1 @@
+import{fs as o,fp as s,fv as e,f0 as t}from"./index-DRiF00Hx.js";const n=o({name:"InputNumber",common:s,peers:{Button:e,Input:t},self:o=>{const{textColorDisabled:s}=o;return{iconColorDisabled:s}}});export{n as i};

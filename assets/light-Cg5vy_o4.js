@@ -1,0 +1,1 @@
+import{fp as e}from"./index-DRiF00Hx.js";const o={name:"Skeleton",common:e,self:e=>{const{heightSmall:o,heightMedium:r,heightLarge:h,borderRadius:i}=e;return{color:"#eee",colorEnd:"#ddd",borderRadius:i,heightSmall:o,heightMedium:r,heightLarge:h}}};export{o as s};
